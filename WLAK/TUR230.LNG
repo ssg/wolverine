@@ -1,0 +1,556 @@
+; Wolverine Turkish language file
+; (c) 1996 SSG - 23rd Aug 96 - 14:33
+; v2.30
+
+-1, Turkce
+
+;- USAGE -
+Usage1, 'Kullanim: W [paket] [parametreler]^M^J'
+Usage2, '"parametreler" a$agidakiler olabilir:^M^J'
+Usage3, '-?        Komut satiri yardim bilgisini gosterir'
+Usage4, '-cd:n     muzik icin n numarali cd surucuyu kullanir (0,1,2...)'
+usage5, '-cfg:nn   nn.cfg isimli dosyayi konfigurasyon dosyasi'
+Usage6, '          nn.key isimli dosyayi da key dosyasi olarak kullanir'
+Usage7, '-fast     yava$ sistemler icin hizli cali$ma modu'
+Usage8, '-flush    disk cache'leri her yazma i$leminden sonra bo$alt'
+Usage9, '-lan:nn   dil degi$imini saglar. standart Wolverine dosyalari yerine'
+Usage10,'          $u dosyalari kullanir:'
+Usage11,'            dil     -> nn.LAN'
+Usage12,'            yardim  -> nn.HLP'
+Usage13,'-newcfg   konfigurasyon dosyasini siler ve yenisini olu$turur'
+Usage14,'-newest   en yeni pakedi acar'
+Usage15,'-nocd     cd player'in ekranda gorunmemesini saglar'
+Usage16,'-nocycle  uzun suren i$lemlerdeki aktivite gostergesini kapar'
+Usage17,'-relax    timeslice releasing kapatilir'
+MaxUsage, '-hebe-'
+
+;- COLORS -
+ReaderColors1, Zemin
+ReaderColors2, Normal yazi
+ReaderColors3, Tagline
+ReaderColors4, Alinti
+ReaderColors5, Tearline
+ReaderColors6, Origin
+
+DefaultQuoteStr, -] @F, Wolverine'den kacabilecegini mi sanar? [-
+NewsAreaName, Haberler
+
+UnregMsg, Kayitli kullanici olmak cok ucuz ve kolay
+UnregHeader, Bakin
+UnregExplain, $unu bi ~aciklasana
+UnregCancel, ~Hadi len, param olsa ohoo
+
+MsgHeaderAddr, Adres
+MsgHeaderArea, Alan
+MsgHeaderFrom, Kimden
+MsgHeaderTo,   Kime
+MsgHeaderSubj, Konu
+MsgHeaderDate, Tarih
+
+SaveMsgHeader, Kaydet
+SaveMsgPrompt, Kayit edilecek dosya adi
+SaveMsgInvalidName, Hatali dosya adi girdiniz!
+SaveMsgExistsTxt, Bu dosya zaten var. Ne yapayim?
+SaveMsgExistsHdr, Aman
+SaveMsgExistsAppend, Arkasina ~ekle
+SaveMsgExistsDelete, Eskisini ~sil
+SaveMsgExistsNewName, ~Ba$ka bi isim gircem
+SaveMsgExistsCancel, ~Vazgectim hepsinden
+
+FileErrorMsg, Dosyayi okuyamadim
+
+WillReplyHeader, Cevaplayacaklariniz
+WillReplyNotFoundMsg, Cevaplayacaginiz mesaj yok
+
+WillReadHeader, Tekrar okuyacaklariniz
+WillReadNotFoundMsg, Tekrar okuyacaginiz mesaj yok
+
+UnReadHeader, Okumadiklariniz
+UnReadNotFoundMsg, Maa$allah okumadiginiz mesaj yok
+
+ForgottenHeader, Unuttuklariniz
+ForgottenNotFoundMsg, Cevaplamayi unuttugunuz mesaj yok
+
+AskPostTxt, Mesaji kaydediim mi?
+AskPostHdr, Bi saniye
+AskPostYes, ~Tabi kaydet
+AskPostNo, ~Hayir kaydetme
+AskPostHelp, ~Nasi yani?
+
+AskForwardTxt, Mesajin icerigi uzerinde degi$iklik yapacak misiniz?
+AskForwardHdr, Forward
+AskForwardNo, ~Hayir gerek yok
+AskForwardYes, ~Evet
+AskForwardCancel, ~Vazgectim
+
+NoPostTxt, Bu alana mesaj yazma yetkiniz yok
+NoPostHdr, Sad but true
+NoPostOK, ~Uhuuuu
+NoPostHelp, ~Niyeee??
+
+AreaAdjustHdr, Bu alani ne yapmayi planliyorsunuz?
+AreaAdjustNone, Gozum gormesin bu alani bir daha
+AreaAdjustPers, Sadece bana ozel mesajlari okuycam
+AreaAdjustPAll, Bana gelenler bi de All'a atilanlar yeter
+AreaAdjustAll, Hepsini istiyorum! Alandaki tum mesajlari!
+AreaAdjustOK, ~Evet boyle
+AreaAdjustCancel, Aman ~bo$ver
+
+NetFlagsHdr, Netmail secenekleri
+NetFlagsCrash, ~Aninda hedef sisteme gonder (Crash)
+NetFlagsKill, ~Gonderdikten sonra orijinalini sil (Kill/Sent)
+NEtFlagsHold, ~Mesaj alici tarafindan gelip alinsin (Hold)
+NetFlagsImmed, ~Mesaj bekletilmeden gonderilsin (Immediate)
+NetFlagsDirect, ~Mesaj direk aliciya gonderilsin (Direct)
+NetFlagsOK, ~Aynen boyle
+NetFlagsCancel, ~Bo$veer
+NetFlagsHelp, Bunlar da ~ne?
+
+LaterHdr, Bu mesaji sonra n'apcan?
+LaterReply, Sakin kafayla ~cevapliycam
+LaterRead, Detayli detayli ~okuycam
+LaterSave, BW~Save icin i$aretliyom
+LaterCancel, ~Kem kum..
+
+AddrNameSurname, Adi Soyadi
+AddrNetmail, Netmail adresi
+AddrVoice, Voice tel
+AddrData, Data tel
+AddrNotes, Notlar
+AddrOK, ~Kaydet
+AddrCancel, ~Bo$veer
+AddrAdd, ~Ekle
+AddrEdit, ~Duzelt
+AddrDelete, ~Sil
+AddrClose, ~Kapa
+AddrHelp, ~Hebe?
+AddrNewHdr, Yeni biri
+AddrEditHdr, Duzeltme
+AddrAskDeleteTxt, Emin misiniz?
+AddrColumnPerson, Ki$i
+AddrColumnAddr, Adresi
+AddrBookHdr, Adres defteri
+
+TaglineManagerHdr, Tagline kontrol ve kumanda paneli
+TaglineManagerAdd, ~Ekle
+taglineManagerDelete, ~Sil
+TaglineManagerEdit, ~Duzelt
+TaglineManagerImport, ~Ogren
+TaglineManagerSave, ~Kaydet
+TaglineManagerCancel, ~Vazgec
+TaglineManagerHelp, ~Ne ki bu $imdi?
+TaglineImportHdr, Tagline ogreniyoz
+TaglineFileHeader, ; Wolverine Tagline Dosyasi
+
+MenuWindowHeader, Genel
+MenuWindowViewer, Bakici
+MenuWindowAddrBook, Adres Defteri
+MenuWindowTaglines, Tagline'lar
+MenuWindowSetup, Ayarlar
+MenuWindowDosPrompt, Dos prompt
+MenuWindowQuit, Biti$
+
+CmdParamsAskDialogPrompt, Parametreler
+
+AlarmSetupHdr, Alarm ayari
+AlarmSetupPrompt, Ne zaman?
+AlarmPopUpMsg, Saat %T oldu haberin yok
+AlarmPopUpHdr, ALOOO
+AlarmPopUpBtn, ~Pardon abi, sagol ayrica
+
+KeyVersionMismatchMsg, Key ba$ka version'a ait
+
+ReplyListWindowHeader, Yazilan mesajlar
+ReplyListFrom, Kimden
+ReplyListTo, Kime
+ReplyListSubj, Konu
+ReplyListArea, Alan
+ReplyListRead, Mesaji ~Oku
+ReplyListDelete, Mesaji ~Sil
+ReplyListNewPacket, ~Yeni cevap pakedi ac
+ReplyListHelp, ~Ne ki?
+
+ReplyDeleteAskTxt, Silcem bak
+ReplyDeleteAskHdr, Bak
+ReplyDeleteOK, ~Sil yav
+ReplyDeleteCancel, ~Aman
+
+NewPacketAskTxt, Tum mesajlar silinecek Hakkaten  silcek misiniz?
+NewPacketAskHdr, Hm?
+newPacketAskYes, ~Evet
+NewPacketAskNo, ~Sakin ha!
+NewPacketAskHelp, ~Ne ki bu $imdi?
+
+SecurityPrompt, Giri$ $ifresi
+SecurityOK, ~Tamam
+SecurityCancel, ~Uhuuu
+SecurityDeny, ACCESS DENIED
+
+AreaChangeHdr, Alan secimi
+AreaChangeOK, ~i$te bu alan
+AreaChangeCancel, ~Vazgectim
+AreaChangeHelp, ~Ne ki?
+
+MsgStatusRead, Okundu
+MsgStatusReplied, Cevaplandi
+MsgStatusPersonal, Size ozel
+MsgStatusWillRead,Okuycam
+MsgStatusWillReply, Cevapliycam
+MsgStatusBWSave, BWSave
+
+DeleteOpenpacketTxt, Bu paket $u anda acik o yuzden onu $imdi silmek iyi bir fikir degil
+DeleteOpenPackethdr, Bakin
+DeleteOpenPacketBtn, ~Anladim
+
+DeletePacketPromptTxt, %P isimli pakedi hakkaten silcek misiniz?
+DeletePacketPromptHdr, Bu o mu?
+DeletePacketPromptYes, ~Evet
+DeletePacketPromptNo, ~Yok oyle $ey
+
+InvalidPacketTxt, Bu paket i$e yaramaz abisi
+InvalidPacketHdr, Sad
+InvalidPacketBtn1, ~Hadi yaa
+InvalidPacketBtn2, ~Uff yaa
+
+AlreadyOpenTxt, Hali hazirda bir paket acikken bu da nerden cikti?
+AlreadyOpenHdr, yaa
+AlreadyOpenOK, ~Dogru haklisin
+AlreadyOpenDoIt, ~Bi $ekilde yap artik
+ReOpenMsg, o zaman iki dakka bekliycen
+
+AreYouHappyTxt, Mutlu musun $imdi?
+AreYouHappyHdr, Al i$te
+AreYouHappyYes, ~Evet
+AreYouHappyVeryYes, ~Hem de nasil
+
+MMAHdr, Manyak Mesaj Ara!
+MMACancelMsg, Aramayi iptal edecek misiniz?
+MMASearchTxt, Pakedi manyak gibi ariyorum
+MMAFindHdr, Manyak mesajlar buldum!
+MMANotFoundTxt, Bulamadim ama iyi bir tecrubeydi
+MMANotFoundHdr, Ehem
+MMANotFoundBtn, ~Demek son sozun bu, peki
+
+SetupHdr, Ayar olayi
+SetupDLDir, Gelen paketler
+SetupULDir, Cevap paketleri
+SetupEditor, Editor komutu
+SetupFilterCmd, Filtre komutu
+SetupQuoteStr, Alinti mesaji
+SetupPassword, Giri$ $ifresi
+SetupSortAreas, Mesaj alanlarini sirala
+SetupFallenAngel, FallenAngel ozelligini kullan
+SetupAskSave, Mesaji kaydediim mi diye sor
+SetupScreenSaver, Ekran koruyucu
+SetupPersBeep, Ki$isel mesajlarda cik cik
+SetupReplySafe, Yazdigim mesajlari koru!
+SetupTaglineSort, Tagline'lari sirala
+SetupPersCheckFirst, Otomatik ki$isel mesaj ara
+SetupNoVivaLaSewage, Serbest alinti olayi
+SetupUnreadReminder, Unutulan mesajlari hatirlat
+SetupTaglineBehaviour, Tagline kullanimi
+SetupNoTaglines, Kullanma
+SetupAskAlways, Her seferinde sor
+SetupAutoTag, Otomatik koy
+SetupSave, ~Boyle
+SetupCancel, Bo$~ver
+SetupPrinter, ~Yazici
+SetupColors, ~Goz zevki
+SetupArchivers, ~Ar$iv programlari
+SetupHelp, ~?
+
+SearchDirsMsg, bakalim buralarda neler var
+
+TaglineInputDialogHdr, i$te firsat
+TaglineInputDialogPrompt, Tagline'iniz
+TaglineInputDialogCheck, Bu tagline'i ilerde kullanirim
+
+TaglineSelectDialogHdr, Tagline dolabi
+TaglineSelect, ~Aha i$te bu
+TaglineRandom, ~Sen ne dersin?
+TaglineNew, ~Yeni bi$ii?
+TaglineGoAhead, ~Farketmeez
+TaglineCancel, Amaaan ~ufff
+TaglineHelp, ~Nasi yani?
+
+MsgDialogOK, ~Tamam
+MsgDialogCancel, ~Vazgec
+MsgDialogAreaChange, ~Alan
+MsgDialogFilter, ~Filtre
+MsgDialogAddrLookup, ~Pentagon
+MsgDialogNetFlags, ~N
+
+RepWindowSave, ~Kaydet
+RepWindowCrosspost, ~Crosspost
+RepWindowEditHeader, ~Ba$lik
+RepWindowEditMsg, ~Mesaj
+RepWindowDelete, ~Sil
+RepWindowPrint, ~Yazdir
+RepWindowHelp, ~Ne?
+
+RepEdithdr, Duzeltme
+
+MsgWindowReply, ~Cevapla
+MsgWindowNetmail, ~Netmail
+MsgWindowOther, ~Oburune
+MsgWindowNew, ~Yeni yaz
+MsgWindowSave, ~Kaydet
+MsgWindowForward, ~Forward
+MsgWindowAdopt, ~Tagline'i kap
+MsgWindowPentagon, ~Pentagon
+MsgWindowLater, ~Sonra
+MsgWindowPrint, Ya~zdir
+MsgWindowUUDecode, ~UUDecode
+MsgWindowSearch, ~Ara
+MsgWindowReplies, Ce~vaplar
+MsgWindowHelp, ~Ha?
+
+TaglineNotFoundMsg, Hani tagline? Nerde hani?
+
+PentagonSearchTxt, PENTAGON: Istediginiz bilgi ara$tiriliyor - Lutfen bekleyin
+PentagonNotfoundMsg, Istenilen kimlik bilgisi kayitlarimizda bulunamadi. Bu $ahis ile ilgili bilgileri Pentagon veri bankasina kendiniz girmek ister misiniz?
+pentagonNotFoundHdr, Pentagon
+PentagonNotFoundYes, ~Gireyim tabi
+PentagonNotFoundNo, ~Hayir te$ekkurler
+
+UUDecodeNotFoundMsg, Mesajda uudecode edilecek dosya bulunamadi. Kahroldum.
+UUDecodeAskHdr, UUDecode
+UUDecodeAskPrompt, Dosya adi
+UUDecodeExistsTxt, %F isimli bir dosya zaten mevcut. Uzerine yazacak misiniz?
+UUDecodeExistsHdr, Bi saniye
+UUDecodeExistsYes, ~Yazacam
+UUDecodeExistsNewName, Yeni bi isim ~gircem
+UUDecodeExistsCancel, Yok ~vazgectim bundan
+
+InSearchHdr,Ara
+InSearchPrompt, Aranacak kelime
+
+Reply, Cevapla
+ReplyOriginal, Oburune cevapla
+NewMsg, Yeni mesaj
+
+MsgListFrom, Kimden
+MsgListTo, Kime
+MsgListSubj, Konu
+AreaListArea, Alan
+AreaListType, Turu
+AreaListDL, Ali$
+AreaListTotal, Top.
+AreaListPers, Size
+AreaListUnread, Okm
+
+AreaTypeLocal, Local
+AreaTypeEcho, Echo
+AreaTypeNetmail, Netmail
+AreaTypeInternet, Internet
+AreaTypeInfo, Bilgi
+AreaTypeArchive, Arsiv
+
+UserStatNone, -
+UserStatPers, Size
+UserStatPAll, Size+All
+UserStatAll, Hepsi
+
+FullAreas, Mesaj iceren alanlar
+EmptyAreas, Iclerinde mesaj olmayan alanlar
+
+ALWPersonal, Ki$isel ~mesajlar
+ALWUnread, ~Okunmayanlar
+ALWForgotten, ~Unutulanlar
+ALWWillReply, ~Cevaplanacaklar
+ALWWillRead, Okunacakla~r
+ALWWriteMsg, Mesaj ~yaz
+ALWSearchMsg, Mesaj ~ara
+ALWHelp, ~Nasi yani?
+ALWClose, ~Kapa
+
+MsgNotFoundTxt, Hayatta bazen aradiginizi bulamazsiniz. Bu gun o gunlerden biri
+MsgNotFoundHdr, Uzgun muyum?
+MsgNotFoundBtn, Iyi ~bakalim
+MsgFoundHdr, Arama sonuclari
+
+NoOLCSupportTxt, Bu mesaj paketi off-line alan konfigurasyonu desteklemiyor
+NoOLCSupportHdr, Oyle bi$ey ki
+NoOLCSupportOK, ~Hmm
+NoOLCSupportHelp, ~Ne gibi?
+
+GlobalUnregMsg, Kayitli kullanici olmadan genel menusune ekleme yapmaniz mumkun degil.
+
+ExecPause, Wolverine'e donmek icin bir tu$a basin...
+
+ViewerEditButtonCaption, ~Editor
+
+SampleText1, ^M-] Sedat Kapanoglu, Wolverine'den kacabilecegini mi sanar? [-^M^M
+SampleText2, ' SK> yeterince acik oldugumu saniyorum. Wolverine'in kodu^M'
+SampleText3, ' SK> satilik degil. Artik ustume gelmeyin ulan. Satmiycam!^M^M'
+SampleText4, Yav Sedat'cim, kimse sana Wolverine'in kodunu sat sonra ne halin varsa^M
+SampleText5, gor demiyor ki. Gel bizle cali$. Kardan yuzde verelim. Sen de sebeplen.^M^M
+SampleText6, optum,^M
+SampleText7, Bill Gates^M^M
+SampleText8, ... alem buysa kral benim^M
+SampleText9, --- Wolverine 2.30 [REG]^M
+SampleText10, ' * Origin: MSN <-> HiTNeT Gateway (8:101/666)'
+
+NotFoundOKButton, ~Hmm
+
+TempFileCreateErrorMsg, Gecici dosya yaratilamadi
+
+ForwardString, ' * %A alanindan forward etmekteydim ki *'
+CrosspostString, ' * %A alanindan crosspost ederkene *'
+ReplyAnotherAreaHeader, (%A alanindaki mesaja cevaben)
+
+ArchiverSetupHdr, Ar$iv programlari
+ArchiverName, Adi
+ArchiverSign, Imza
+ArchiverCompressCmd, SIkI$tIrma komutu
+ArchiverExtractCmd, Acma komutu
+ArchiverScreenOutput, Ekran ciktisi
+
+GenericSaveButton, ~Kaydet
+GenericCancelButton, ~Vazgec
+GenericHelpButton, ~Ne gibi?
+GenericYesButton, ~Evet
+GenericNoButton, ~No
+GenericOKButton, ~Tamam
+GenericInstallButton, ~Kur
+
+GenericWarning, DiKKAT
+GenericError, HATA
+GenericInformation, ACIKLAMA
+GenericConfirm, ONAY
+
+; note: install button's hotkey conflicts with save button's...
+
+ColorConfigHdr, Goz zevki
+ColorConfigPalette, Palet
+ColorConfigFont, Yazi tipi
+ColorConfigCategory, Kategori
+ColorCOnfigColor, Renk
+ColorConfigSampleMsg, Ornek mesaj
+
+PacketListWindowHdr, Paketler / BBS'ler
+PacketListHdr, Okuyabileceginiz mesaj paketleri
+PLWPacket, Paket
+PLWSize, Boyu
+PLWDate, Tarih
+PLWTime, Saat
+PLWTotal, Top
+PLWUnread, Okm
+PLWWillRead, Okck
+PLWWillReply, Cvck
+PLWPers, Size
+BBSListHdr, Paket acmadan mesaj yazabileceginiz BBS'ler
+PODOpen, ~Ac
+PODDelete, ~Sil
+PODMMA, ~Manyak Mesaj Ara!
+PODRefresh, ~Tazele
+PODHelp, ~Ne?
+
+PrinterSetupHdr, Printer
+PrinterSetupPrompt, Yazici ciki$i
+
+PersonalMsg, Ki$isel mesajlar
+PersonalNotFound, Adiniza hic mesaj yok
+
+UnreadWarnMsg, Yakla$ik %U tane mesaji okumadiniz. Onlari okumak ister misiniz?
+UnreadWarnHdr, Bi saniye
+UnreadWarnCancel, ~Vazgectim beni geri gonder
+UnreadWarnOk, ~Tabii ki
+UnreadWarnIgnore, ~Sonra okurum
+UnreadWarnMark, ~Okudum farzet
+UnreadWarnHelp, ~Ha?
+UnreadFindMsg, hemen geliyor
+UnreadLiarMsg, hadi len yalanci
+
+HelpFileNotFoundMsg, %F yoksa yardim da yok
+HelpFileNotFoundHdr, ona gore
+HelpFileNotFoundButton, ~Ne halin varsa gor
+
+HelpWindowHeader, G”kten bir el uzanir
+HelpWindowBack, ~Geri
+HelpWindowClose, ~Yeter
+HelpWindowHelp, Bu da ~ne?
+HelpWindowContents, ~Konu ba$liklari
+
+NoSetupMsg, Ayar dosyasi bulunamadi. Yeni bir taneye ne dersin?
+NoSetupHdr, Hey
+NoSetupOK, ~Tabii ki
+NoSetupCancel, ~Sacmalama
+
+IllegalSetupMsg, Ayar dosyasi biraz farkli gibi
+IllegalSetuphdr, Aha
+IllegalSetupOK, ~En iyisini yap!
+IllegalSetupQuit, ~Cik di$ari
+IllegalSetupHelp, ~Nasi yani?
+
+SecurityAbortMsg, Kiss your pole, goodbye
+
+InvalidCOMSPECMsg, COMSPEC ayariniz hatali
+
+ViewerHdr, Neye bakicaz?
+
+ReplyConflictMsg, Acilan mesaj pakedinin sahibi ile cevap pakedindeki mesajlarin sahibinin isimleri tutmuyor. Cevap pakedinde %F isimli $ahsin mesajlari var. Eger bu $ekilde mesaj yazarsaniz mesajlar kari$ir. Mesaj yazmamaya dikkat edin.
+ReplyConflictHdr, Kaos
+ReplyConflictIgnore, ~Tamam sagol
+ReplyConflictDontAsk, Bi DAA ~UYARMA!
+ReplyConflictHelp, ~Ne gibi?
+
+FltSelLabel, Aktif filtreler
+FltListerName, Filtre
+FltListerDesc, Nedir?
+FltListerAuthor, Yazari
+FltHeader, Filtre olayi
+
+; 2.30+
+
+AutoSearchMsg, Mesaj paketlerinizin bulundugu directory'yi Wolverine'in aramasini ister misiniz?
+VivaLaSewageHdr, Viva la sewage
+VivaLaSewageMsg, Mesajinizin %80'inden fazlasi alinti iceriyor. Ya fazla alintilari silin ya da mesaji gondermeyin!
+VivaLaSewageOK, ~Alintilari silicem
+VivaLaSewageCancel, ~Ugra$amam $imdi
+VivaLaSewageHelp, ~Ne?
+
+SearchDialogFrom, Kimden
+SearchDialogTo, Kime
+SearchDialogSubj, Konu
+SearchDialogText, Mesaj
+;SearchDialogHdr, Aranacak kelime
+;SearchFrom, "Kimden" alanina gore
+;SearchTo, "Kime" alanina gore
+;SearchSubj, "Konu" alanina gore
+;SearchText, Mesaj icindeki yaziya gore
+SearchStart, ~Bul onu!
+SearchCancel, ~Vazgectim
+SearchHelp, ~Ne?
+
+ParseAND, VE
+ParseOR, VEYA
+
+CorruptEXE1, Wolverine'in EXE dosyasi degi$mi$! Bu durumda Wolverine'i
+CorruptEXE2, cali$tirmak COK tehlikelidir. Ama yine de cali$tiracam derseniz
+CorruptEXE3, -RISK parametresiyle Wolverine'in bu bozuk halde cali$masini
+CorruptEXE4, saglayabilirsiniz.
+CorruptEXE5, UYARI: Bu durumda bilgisayarinizin ba$ina gelecek herhangi bir
+CorruptEXE6, zarardan programin yazari Sedat Kapanoglu sorumlu degildir,
+CorruptEXELast, tutulamaz!! Tum sorumluluk kullaniciya aittir!!
+
+FileOpenDialogPrompt, Dosya adi
+FileOpenDialogRefreshButton, ~Tazele
+FileOpenDialogColumnFile, Dosya
+FileOpenDialogColumnSize, Boyu
+FileOpenDialogParentStr, (bi uste)
+FileOpenDialogDirStr, (dir)
+
+TaglineCategory, Kategori
+TaglineTagline, Tagline
+
+CategoryAddHdr, Kategori Ekle
+CategoryEditHdr, Kategori Duzelt
+CategoryPrompt, Kategori
+
+CategoryUnregMsg, Tagline kategorilerini sadece kayitli kullanicilar kullanabilir!
+
+FilterInstallHdr, Filtre kur
+FilterInstallSuccess, Filtreniz ba$ariyla kuruldu.
+FilterInstallMissingInfo, Filtre icinde kurulum bilgisi yok. Bu filtreyi kendiniz kopyalamaniz gerekecek.
+FilterInstallExistsWarning, Bu filtre zaten var. Ustune tekrar kuracak misiniz?

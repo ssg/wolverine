@@ -1,0 +1,505 @@
+; Wolverine English language file
+; (c) 1996 SSG - Dec 96
+; v2.04+
+
+-1, Turkce
+
+;- USAGE -
+Usage1, 'Usage: W [packet] [-?] [-cfg:nn] [-relax] [-fast] [-lan:nn]^M^J'
+Usage2, '-?        Shows this command line help'
+usage3, '-cfg:nn   Uses nn.cfg as configuration file and'
+Usage4, '          nn.key as key file.'
+Usage5, '-fast     Fast mode for slow systems'
+Usage6, '-lan:nn   Allows language switching. Uses following files instead'
+Usage7, '          of their originals:'
+Usage8, '             language -> nn.LAN'
+Usage9, '             help     -> nn.HLP'
+Usage10,'             palette  -> nn.COL'
+Usage11,'             tagline  -> nn.TAG'
+Usage12,'-relax    Turns off timeslice releasing'
+Usage13,'-newest   Opens newest incoming mail packet at startup'
+MaxUsage, '-hebe-'
+
+;- COLORS -
+ReaderColors1, Background
+ReaderColors2, Normal text
+ReaderColors3, Tagline
+ReaderColors4, Quote
+ReaderColors5, Tearline
+ReaderColors6, Origin
+
+DefaultQuoteStr, -] You can run @F, but you can't hide [-
+NewsAreaName, News
+
+UnregMsg, ^CIt's really cheap to be a registered user
+UnregHeader, Look
+UnregExplain, ~Explain
+UnregCancel, ~Get away
+
+MsgHeaderAddr, Addr
+MsgHeaderArea, Area
+MsgHeaderFrom, From
+MsgHeaderTo,   To
+MsgHeaderSubj, Subj
+MsgHeaderDate, Date
+
+SaveMsgHeader, Save
+SaveMsgPrompt, File to be saved
+SaveMsgInvalidName, ^CYou've entered invalid filename
+SaveMsgExistsTxt, ^CThis file already exists^M^CWhat should I do?
+SaveMsgExistsHdr, Hey
+SaveMsgExistsAppend, ~Append
+SaveMsgExistsDelete, ~Overwrite
+SaveMsgExistsNewName, ~New name
+SaveMsgExistsCancel, ~Forget it
+
+FileErrorMsg, Couldn't read the file
+
+UnimplementedMsg, ^CNot implemented yet
+UnimplementedHdr, Sorry
+UnimplementedButton, ~No problem
+
+WillReplyHeader, Messages you're going to reply
+WillReplyNotFoundMsg, There are no messages to be replied
+
+WillReadHeader, Messages you're going to read
+WillReadNotFoundMsg, There are no messages to be read
+
+UnReadHeader, Unread messages
+UnReadNotFoundMsg, All messages have been read
+
+ForgottenHeader, Forgotten messages
+ForgottenNotFoundMsg, There are no messages forgotten
+
+AskPostTxt, ^CShould I save the message?
+AskPostHdr, Excuse me sir
+AskPostYes, ~Yes
+AskPostNo, ~No
+AskPostHelp, ~What?
+
+AskForwardTxt, ^CWill you edit the message?
+AskForwardHdr, Forward
+AskForwardNo, ~No
+AskForwardYes, ~Yes
+AskForwardCancel, ~Abort the operation
+
+ForwardHeader, ' * Wolverine forwarded the following message *'
+ReplyAnotherAreaHeader, (Replying a message originally in %A)
+
+NoPostTxt, ^CYou don't have right to write to that area
+NoPostHdr, Sad but true
+NoPostOK, ~Sad
+NoPostHelp, ~Why?
+
+AreaAdjustHdr, What do you plan to do about this area?
+AreaAdjustNone, I don't want to see it again
+AreaAdjustPers, I'm gonna read only my personals
+AreaAdjustPAll, My personals and ones to ALL are enough
+AreaAdjustAll, I want them all!! All messages in the area!
+AreaAdjustOK, This is ~OK
+AreaAdjustCancel, ~Forget it
+
+NetFlagsHdr, Netmail options
+NetFlagsCrash, ~Send immediately and directly to the receiver (Crash)
+NetFlagsKill, ~Delete original after mail has been sent (Kill/Sent)
+NEtFlagsHold, ~The mail will be picked up by the receiver (Hold)
+NetFlagsImmed, ~Send the message immediately (Immediate)
+NetFlagsDirect, ~Send the message directly to the receiver (Direct)
+NetFlagsOK, ~That's it
+NetFlagsCancel, ~Forget it
+NetFlagsHelp, ~What?
+
+LaterHdr, What are you gonna do about this message?
+LaterReply, ~Reply it later
+LaterRead, R~ead it later
+LaterSave, Marking it for BW~Save
+LaterCancel, ~No no
+
+AddrNameSurname, Name Surname
+AddrNetmail, Netmail addr
+AddrVoice, Voice tel
+AddrData, Data tel
+AddrNotes, Notes
+AddrOK, ~Save
+AddrCancel, ~Forget it
+AddrAdd, ~Add
+AddrEdit, ~Edit
+AddrDelete, ~Delete
+AddrClose, ~Close
+AddrHelp, ~How?
+AddrNewHdr, New person
+AddrEditHdr, Edit
+AddrAskDeleteTxt, ^CAre you sure?
+AddrColumnPerson, Person
+AddrColumnAddr, Address
+AddrBookHdr, Address book
+
+TaglineManagerHdr, Tagline control and command center
+TaglineManagerAdd, ~Add
+taglineManagerDelete, ~Delete
+TaglineManagerEdit, ~Edit
+TaglineManagerSave, ~Save
+TaglineManagerCancel, ~Cancel
+TaglineManagerHelp, ~What is this?
+TaglineFileHeader, ; Wolverine Tagline File
+
+MenuWindowHeader, General
+MenuWindowViewer, Viewer
+MenuWindowAddrBook, Address Book
+MenuWindowTaglines, Taglines
+MenuWindowSetup, Settings
+MenuWindowDosPrompt, Dos prompt
+MenuWindowQuit, Finish
+
+CmdParamsAskDialogPrompt, Parameters
+
+AlarmSetupHdr, Alarm setup
+AlarmSetupPrompt, When?
+AlarmPopUpMsg, ^CThe time is %T and you're sleeping!
+AlarmPopUpHdr, WAKE UP!
+AlarmPopUpBtn, ~Excuse my meager existence
+
+KeyVersionMismatchMsg, This key belongs to another version
+
+ReplyListWindowHeader, Written messages
+ReplyListFrom, From
+ReplyListTo, To
+ReplyListSubj, Subj
+ReplyListArea, Area
+ReplyListRead, ~Read
+ReplyListDelete, ~Delete
+ReplyListNewPacket, ~New reply packet
+ReplyListHelp, ~What?
+
+ReplyDeleteAskTxt, Confirm the deletion
+ReplyDeleteAskHdr, Request
+ReplyDeleteOK, ~Confirmed
+ReplyDeleteCancel, ~Denied
+
+NewPacketAskTxt, ^CAll replies will be deleted^M^CAre you serious?
+NewPacketAskHdr, Hm?
+newPacketAskYes, ~Absolutely
+NewPacketAskNo, ~Never!
+NewPacketAskHelp, ~What?
+
+SecurityPrompt, Access password
+SecurityOK, ~Proceed
+SecurityCancel, ~No way
+SecurityDeny, ^CACCESS DENIED
+
+AreaChangeHdr, Area selection
+AreaChangeOK, ~This is it
+AreaChangeCancel, ~This is not
+AreaChangeHelp, ~What?
+
+SearchDialogHdr, Keyword to be searched
+SearchFrom, in "From" field
+SearchTo, in "To" field
+SearchSubj, in "Subj" field
+SearchText, in message text
+SearchStart, ~Start
+SearchCancel, ~Argh
+
+MsgStatusRead, Read
+MsgStatusReplied, Replied
+MsgStatusPersonal, Personal
+MsgStatusWillRead,GonnaRead
+MsgStatusWillReply,GonnaReply
+MsgStatusBWSave, BWSave
+
+DeleteOpenpacketTxt, ^CThis packet is open now so^M^Cdeleting it is not a good idea
+DeleteOpenPackethdr, Listen
+DeleteOpenPacketBtn, ~I see
+
+DeletePacketPromptTxt, ^CConfirm the deletion of^M^Cpacket %P.
+DeletePacketPromptHdr, Request
+DeletePacketPromptYes, ~Confirmed
+DeletePacketPromptNo, ~Denied
+
+InvalidPacketTxt, ^CThis packet is useless
+InvalidPacketHdr, Sad
+InvalidPacketBtn1, ~Hmm
+InvalidPacketBtn2, ~Hmmmmm
+
+AlreadyOpenTxt, ^CWhat's this? A packet^M^Cis already open??
+AlreadyOpenHdr, Hey
+AlreadyOpenOK, ~You're right
+AlreadyOpenDoIt, ~Do it anyway
+ReOpenMsg, hold your horses
+
+AreYouHappyTxt, ^CAre you happy now?
+AreYouHappyHdr, Get this
+AreYouHappyYes, ~Yes
+AreYouHappyVeryYes, ~Very yes
+
+MMAHdr, Maniac Message Search!
+MMACancelMsg, ^CAre you gonna cancel the search?
+MMASearchTxt, Diggin into the packet!
+MMAFindHdr, Found maniac messages!
+MMANotFoundTxt, ^CBesides nothing, that was a great experience.
+MMANotFoundHdr, Humm
+MMANotFoundBtn, ~I'm gonna kill you then
+
+SetupHdr, Day of settings
+SetupDLDir, Incoming packets
+SetupULDir, Reply packets
+SetupEditor, Editor command
+SetupFilterCmd, Filter command
+SetupQuoteStr, Quote string
+SetupPassword, Access password
+SetupSortAreas, Sort message areas
+SetupFallenAngel, Use FallenAngel feature
+SetupAskSave, Ask before posting the message
+SetupScreenSaver, Screen saver
+SetupPersBeep, Beep on personal messages
+SetupReplySafe, Protect my poor mail!
+SetupTaglineSort, Sort taglines
+SetupPersCheckFirst, Automatic personal msg search
+SetupTaglineBehaviour, Tagline usage
+SetupNoTaglines, Don't use
+SetupAskAlways, Ask always
+SetupAutoTag, Put automatically
+SetupSave, ~This is it!
+SetupCancel, ~No
+SetupPrinter, ~Printer
+SetupColors, ~Vision
+SetupArchivers, ~Archivers
+SetupHelp, ~?
+
+SearchDirsMsg, let's see what you have
+
+TaglineInputDialogHdr, here's the opportunity
+TaglineInputDialogPrompt, Your tagline
+TaglineInputDialogCheck, I'm gonna use it later
+TaglineInputDialogOK, ~OK
+TaglineInputDialogCancel, ~Cancel
+
+TaglineSelectDialogHdr, Tagline wardrobe
+TaglineSelect, ~This is it
+TaglineRandom, ~What do you say?
+TaglineNew, ~New one?
+TaglineGoAhead, ~Doesn't matter
+TaglineCancel, ~Get away
+TaglineHelp, ~What?
+
+MsgDialogOK, ~OK
+MsgDialogCancel, ~Cancel
+MsgDialogAreaChange, ~Area
+MsgDialogFilter, ~Filter
+MsgDialogAddrLookup, ~Pentagon
+MsgDialogNetFlags, ~N
+
+RepWindowSave, ~Save
+RepWindowCrosspost, ~Crosspost
+RepWindowEditHeader, ~Header
+RepWindowEditMsg, ~Message
+RepWindowDelete, ~Delete
+RepWindowPrint, ~Print
+RepWindowHelp, ~What?
+
+RepEdithdr, Edit
+
+MsgWindowReply, ~Reply
+MsgWindowNetmail, ~Netmail
+MsgWindowOther, ~Other
+MsgWindowNew, ~Write new
+MsgWindowSave, ~Save
+MsgWindowForward, ~Forward
+MsgWindowAdopt, ~Adopt tagline
+MsgWindowPentagon, ~Pentagon
+MsgWindowLater, ~Later
+MsgWindowPrint, ~Print
+MsgWindowUUDecode, ~UUDecode
+MsgWindowSearch, ~Search
+MsgWindowReplies, ~Vue replies
+MsgWindowHelp, ~Huh?
+
+TaglineNotFoundMsg, ^CNo tagline in this message
+
+PentagonSearchTxt, PENTAGON: Searching the database - please wait
+PentagonNotfoundMsg, The requested identity couldn't be found^Min our records. Would you like to enter^Mthe information manually?
+pentagonNotFoundHdr, Pentagon
+PentagonNotFoundYes, ~That would be nice
+PentagonNotFoundNo, ~No thanks
+
+UUDecodeNotFoundMsg, ^CNo uuencoded files found
+UUDecodeAskHdr, UUDecode
+UUDecodeAskPrompt, Filename
+UUDecodeExistsTxt, ^C%F already exists^M^CShould I overwrite it?
+UUDecodeExistsHdr, Warning
+UUDecodeExistsYes, ~Yes
+UUDecodeExistsNewName, ~Gonna change the name
+UUDecodeExistsCancel, ~Abort
+
+InSearchHdr,Search
+InSearchPrompt, Keyword to be searched
+
+Reply, Reply
+ReplyOriginal, Reply to other
+NewMsg, New message
+
+MsgListFrom, From
+MsgListTo, To
+MsgListSubj, Subject
+AreaListArea, Area
+AreaListType, Type
+AreaListDL, DL
+AreaListTotal, Tot.
+AreaListPers, Pers
+AreaListUnread, Unrd
+
+AreaTypeLocal, Local
+AreaTypeEcho, Echo
+AreaTypeNetmail, Netmail
+AreaTypeInternet, Internet
+AreaTypeInfo, Info
+AreaTypeArchive, Archive
+
+UserStatNone, -
+UserStatPers, Personal
+UserStatPAll, Pers+All
+UserStatAll, All
+
+FullAreas, Areas containing message
+EmptyAreas, Empty areas
+
+ALWPersonal, ~Personal mail
+ALWUnread, ~Unread mail
+ALWForgotten, ~Forgotten mail
+ALWWillReply, Mail to be ~replied
+ALWWillRead, Mail to be r~ead
+ALWWriteMsg, ~Write message
+ALWSearchMsg, ~Search message
+ALWHelp, ~What?
+ALWClose, ~Close packet
+
+MsgNotFoundTxt, ^CSometimes you can't find you expected^M^CNow is that time
+MsgNotFoundHdr, Am I sorry?
+MsgNotFoundBtn, ~No problem
+MsgFoundHdr, Search results
+
+NoOLCSupportTxt, ^CThis mail packet doesn't support^M^Coff-line area configuration
+NoOLCSupportHdr, It's that much
+NoOLCSupportOK, ~Hmm
+NoOLCSupportHelp, Like ~what?
+
+GlobalUnregMsg, ^CWithout being a registered user^M^Cyou can't add items to "general" menu
+
+ExecPause, Press any key to return to Wolverine...
+
+ViewerEditButtonCaption, ~Editor
+
+SampleText1, ^M-] You can run mARQUIS, but you can't hide [-^M^M
+SampleText2, ' MDS> You know me Jag, but Wolverine's protection scheme^M'
+SampleText3, ' MDS> is unbeleivable. According to Intel manuals, opcode^M^M'
+SampleText4, Ok, I see but how can it run without causing an exception?
+SampleText5, This is absolutely impossible. There has to be something missing.^M^M
+SampleText6, Keep up the good work,^M
+SampleText7, JaGuAR/SJ^M^M
+SampleText8, ... Wolverine kicks^M
+SampleText9, --- Wolverine 2.04 [REG]^M
+SampleText10, ' * Origin: Pain in the ASS BBS (1:100/105)'
+
+NotFoundOKButton, ~Hmm
+
+TempFileCreateErrorMsg, Couldn't create temporary file
+
+ForwardString, ' * Forwarding from area %A  *'
+CrosspostString, ' * Crossposting from area %A *'
+
+ArchiverSetupHdr, Archive programs
+ArchiverName, Name
+ArchiverSign, Signature
+ArchiverCompressCmd, Compress cmd
+ArchiverExtractCmd, Extract cmd
+ArchiverScreenOutput, Screen output
+
+GenericSaveButton, ~Save
+GenericCancelButton, ~Cancel
+GenericHelpButton, ~What?
+GenericYesButton, ~Yes
+GenericNoButton, ~No
+GenericOKButton, ~OK
+
+ColorConfigHdr, Vision
+ColorConfigPalette, Palette
+ColorConfigFont, Font
+ColorConfigCategory, Category
+ColorCOnfigColor, Color
+ColorConfigSampleMsg, Sample message
+
+PacketListWindowHdr, Packets / BBS's
+PacketListHdr, Mail packets you may read
+PLWPacket, Packet
+PLWSize, Size
+PLWDate, Date
+PLWTime, Time
+PLWTotal, Tot
+PLWUnread, Unr
+PLWWillRead, WRd
+PLWWillReply, WRp
+PLWPers, Pers
+BBSListHdr, Systems which you may write messages without a mail packet
+PODOpen, ~Open
+PODDelete, ~Delete
+PODMMA, ~Maniac Message Search!
+PODRefresh, ~Refresh
+PODHelp, ~What?
+
+PrinterSetupHdr, Printer
+PrinterSetupPrompt, Printer output
+
+PersonalMsg, Personal messages
+PersonalNotFound, There are no personal messages
+
+UnreadWarnMsg, ^CYou are about to leave %U messages unread^M^CDo you want to read them?
+UnreadWarnHdr, Excuse me
+UnreadWarnCancel, ~Send me back
+UnreadWarnOk, ~Sure
+UnreadWarnIgnore, ~Later
+UnreadWarnMark, ~Mark em read
+UnreadWarnHelp, ~What?
+UnreadFindMsg, here they come
+UnreadLiarMsg, you liar
+
+HelpFileNotFoundMsg, %F is missing. No help dude.
+HelpFileNotFoundHdr, hey
+HelpFileNotFoundButton, ~Go hell
+
+HelpWindowHeader, Helping hand
+HelpWindowBack, ~Back
+HelpWindowClose, ~Enough
+HelpWindowHelp, ~What?
+HelpWindowContents, ~Topics
+
+NoSetupMsg, ^CThere is no settings file^M^CHow about a new one?
+NoSetupHdr, Hey
+NoSetupOK, ~Sure
+NoSetupCancel, ~Don't be silly
+
+IllegalSetupMsg, ^CSettings file seems somewhat different
+IllegalSetuphdr, Aha
+IllegalSetupOK, ~Do the best!
+IllegalSetupQuit, ~I'll take care of it
+IllegalSetupHelp, ~What?
+
+SecurityAbortMsg, Kiss your pole, goodbye
+
+InvalidCOMSPECMsg, Your COMSPEC setting is invalid
+
+ViewerHdr, What should we view?
+ViewerPrompt, Filename
+
+ReplyConflictMsg, ^CPossible reply packet conflict.^M^CThere are messages belong to %F^M^COpening this reply packet is not recommended
+ReplyConflictHdr, Soap operas
+ReplyConflictIgnore, ~No problem
+ReplyConflictDontAsk, ~Don't ask this question again
+ReplyConflictHelp, ~What?
+
+FltSelLabel, Active filters
+FltListerName, Filter
+FltListerDesc, What?
+FltListerAuthor, Author
+FltHeader, Filter
+
+; 2.05

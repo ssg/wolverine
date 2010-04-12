@@ -1,0 +1,33 @@
+-1, English
+
+Yes, ~Yes
+No, ~No
+OK, ~OK
+Cancel, ~Cancel
+Retry, ~Retry
+
+WelcomeTitle, Welcome!
+WelcomeMsg, Welcome to Wolverine Install. Now we will try to install Wolverine to your system in a painless way.
+
+PathInputTitle, Where Wolverine should be installed?
+PathInputPrompt, Destination directory
+
+NoFreeSpaceTitle, No free space
+NoFreeSpaceMsg, There is not enough space on the disk you want to install Wolverine on. You must have at least 1MB free space on that disk.
+
+CreateDirTitle, dum de dum
+CreateDirMsg, The directory does not exist. Therefore I have to create it. Should I?
+
+ExistingWolvieTitle, Wolverine detected!
+ExistingWolvieMsg, In the destination directory I've found another Wolverine. Would you like your existing files (taglines etc) to be preserved?
+
+AnalyzingMsg, examining your system
+
+ABortTitle, Really?
+AbortMsg, Do you really want to abort the installation?
+
+CompleteTitle, Happy end
+CompleteMsg, Install operation has been completed successfully. I've redirected the power reactor to the infra-red receivers.
+
+CopyingMsg, Copying %F...
+

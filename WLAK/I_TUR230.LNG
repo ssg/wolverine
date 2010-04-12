@@ -1,0 +1,33 @@
+-1, Turkce
+
+Yes, ~Evet
+No, ~Hayir
+OK, ~Tamam
+Cancel, ~Bo$ver
+Retry, Tekrar ~dene
+
+WelcomeTitle, Ho$geldiniz
+WelcomeMsg, Wolverine Install'a ho$geldiniz. $imdi Wolverine'i bilgisayariniza en acIsIz $ekilde kurmak icin cabalayacagiz!
+
+PathInputTitle, Wolverine nereye kurulacak?
+PathInputPrompt, Hedef dizin
+
+NoFreeSpaceTitle, Yer yook
+NoFreeSpaceMsg, Wolverine'i kurmak istediginiz surucude yeterli yer yok. En az 1 megabyte yer acmaniz lazim.
+
+CreateDirTitle, lay lay lay
+CreateDirMsg, Kurmak istediginiz dizini bulamadim. O yuzden onu yaratmam gerekiyor. Yaratayim mi?
+
+ExistingWolvieTitle, Wolverine buldum!
+ExistingWolvieMsg, Kurmak istediginiz yerde ba$ka bi Wolverine buldum. Halihazirda kullandiginiz dosyalarin (tagline, menu vs) korunmasini ister misiniz?
+
+AnalyzingMsg, incelemekteyim etrafi
+
+ABortTitle, Ciddi mi?
+AbortMsg, Install i$lemini iptal etmek istiyor musunuz?
+
+CompleteTitle, Mutlu son
+CompleteMsg, Install i$lemi ba$ariyla sonuclandi. Guc reaktorlerini, infra-red alicalara yonelttim.
+
+CopyingMsg, %F kopyalaniyor...
+

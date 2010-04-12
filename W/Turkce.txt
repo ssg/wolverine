@@ -1,0 +1,1037 @@
+; Help file format
+; .topic topicname[=contextnumber]
+;   hyperlinks are shown like {this:linktothis}
+; .end
+;
+; .note notename
+; .title notetitle
+; .end
+; when adapting the help file be careful not to mess with sequence
+; of topics and linknames (the word after colon in hyperlinks)
+
+.topic NoContext=0
+Yahu yardim edebilcek olsam bir an tereddut eder miyim sevgili user'cigim.
+Bak goruyosun elimiz dolu me$guluz, girme araya boyle durumlarda yahu.
+Seni de bi yerde siniyoruz burda yardim olmadan napican gibisinden. Hadi
+bakalim, bir daha dene ba$aracaksin.
+.end
+
+.topic Contents=1
+
+ {Wolverine hakkinda:about}
+
+Kullanim:
+ {Klavye:keymask}
+ {Genel menusu:global}
+ {Filtreler:filters}
+ {Komut satiri parametreleri:cmdline}
+
+Sistem notlari:
+ {DOS:dos}
+ {DESQview:desqview}
+ {OS/2:os2}
+ {Windows:windows}
+
+.end
+
+.topic Filters
+Her yazdiginiz mesajda rutin yaptiginiz i$lemleri mesaj filtreleri
+ile yapabilirsiniz. Mesaj filtreleri yazdiginiz her mesajdan sonra
+cali$tirilan ufak programciklardir. Filtrelerin hangi dille yazildigi
+ne tur oldugu onemli degildir. Wolverine pakedinde denemeniz icin FLT\
+directory'sinin altinda bir kac filtre ornegi mevcuttur. Wolverine
+2.00'dan itibaren filtreler FLT\ directory'si altinda bulunmak zorundadir.
+
+NOT: Filtrelerin kullanacagi harici tum dosyalar da FLT\ directory'sinde
+olmalidir...
+
+{Siz de filtre yazabilirsiniz!:filterdk}
+.end
+
+.topic filterdk
+Bir filtreye komut satirindan iki parametre gonderilir. Birincisi
+filtre programinin okumasi ve i$lemesi gereken kaynak dosyanin tam adidir.
+Ikincisi ise filtrenin i$ledigi bilgiyi yazacagi dosyanin adidir.
+
+Hizdan kazanmak icin filtre programi direk kaynak dosyayi da manipule
+edebilir. Ayrica bu metod Wolverine 1.x ile de uyumludur. Yine de daha
+rahat kodlanabilmesinden dolayi kaynak ve hedef dosyalarin kullanilmasi
+tercih edilir.
+
+Bir filtrenin tam olarak neye benzedigini merak ediyorsaniz ornek
+filtrelerin kaynak kodlarini inceleyiniz.
+
+Yarattiginiz filtrelerin ismi sekiz harfi gecemeyeceginden filtrenizi
+tanimlamayi kolayla$tirmak amaciyla filtrenizle ayni isme sahip *.FLT
+dosyasi yaratirsiniz. Formati cok basittir:
+
+Desc = Filtrenin aciklamasi
+Author = Filtreyi yazan ki$inin (muhtemelen siz) adi
+
+Wolverine filtrenizle ilgili bu extra bilgiyi otomatik olarak bulacak ve
+kullanacktir.
+
+.end
+
+.topic global
+Ekranin sol ust ko$esinde "Genel" diye gorunen bir pencere vardir.
+Bu pencerenin icinde de minik minik button'cuklar vardir. Efenim
+bu button'larin yaninda da o button'un ne i$ yaptigi yazar. I$te
+bu anlatilan nesnelerin olu$turdugu grubun adi "Genel menusu"dur..
+
+Peki bu menuyu ozel yapan nedir? Buraya kendi uygulamalarinizi da
+ekleyebilirsiniz. Sadece {kayitli kullanicilarin:registration}
+sahip olabilecegi bu avantaji degerlendirmenin yontemi $udur:
+
+Wolverine pakedinden cikan W.MNU adinda bir dosya vardir. Bu dosyanin
+icine kullanacaginiz uygulamalari eklersiniz. Daha detayli aciklamalar
+bizzat W.MNU dosyasinin icinde mevcuttur.
+
+Eklediginiz programlar menude yanlarinda bir numara ile gorunurler.
+Alt tu$una basik tutarken bu numaraya basarsaniz komut direk cali$ir.
+Bu da ne ho$ ve ne kadar zamandir undocumented bir ozelliktir.
+.end
+
+.topic DESQview
+DESQview artik tarih olmaya ba$ladigindan deneme firsatim olmadi ama
+pek umidim de yok... Yine de Wolverine DESQview detection ve timeslice
+release destegini kullanmakta...
+.end
+
+.topic cmdline
+Wolverine'i cali$tirirken kullanabileceginiz parametreler:
+
+ -?
+Bu ekrana benzer bi yardim bilgisi goruntuler.
+
+ -cfg:nn
+nn.CFG isimli dosyayi konfigurasyon dosyasi olarak kullanir. Farkli
+ayarlara sahip birden fazla kullanicinin surekli ayar degi$tirmemesi
+icin konmu$tur. Ornek: W -cfg:ahmet... Kayitli kullanicilar icin not:
+-cfg parametresini kullandiginizda key dosyasi olarak sectiginiz
+konfigurasyonun adiyla ayni adda key dosyasi aranir... Verilen ornekteki
+gibi cali$tirildiginda, Wolverine key dosyasi olarak AHMET.KEY isimli
+bir dosya arar... Key dosyanizi rename etmeniz gerekmektedir...
+
+ -lan:nn
+Wolverine'in coklu dil destek ozelliklerini aktif hale getirir ayrica
+guc reaktorunu de maksimuma dayayip enerji birikectiricilerini
+oykunle$tirir... Standart Wolverine dosyalari yerine parametre olarak
+verdiginiz alternatif dosya ismi kullanilir... Ornegin ES BBS'ten
+Wolverine icin Ingilizce dil dosyasi aldik diyelim... Icinden 4 tane
+dosya cikti: ENG.LAN, ENG.HLP, ENG.COL, ve ENG.TAG... Siz de bunu
+Wolverine'in bulundugu directory'ye kopyaladiniz... $imdi Wolverine'i
+Ingilizce cali$tirmak icin yapmaniz gereken W -lan:eng yazmaktir...
+Boyle yani...
+
+ -relax
+Eger bir multitasking ortam altindaysaniz ve Wolverine cok cok yava$
+cali$iyorsa... (surunuyorsa)... bu parametreyi kullanip biraz hizlandirma
+$ansiniz mevcut...
+
+ -fast
+Emulasyon altinda cali$anlar veya Wolverine'i Win95 altinda pencere
+icinde cali$tirmaya cali$anlar hatta Wolverine'i 286 altinda cali$tirmaya
+bulunanlar gaflet ve dalalet icinde bulunabilirler... Bu ahval ve $erait
+icinde dahi vazifen Wolverine'i bu parametreyle cali$tirmaktir...
+Muhtac oldugun kudret damarlarindaki asil kanda mevcuttur.
+
+ -newest
+Wolverine'i bu parametreyle cali$tirdiginizda "gelen paketler" directory'nizdeki
+en yeni mesaj pakedi otomatik olarak acilir...
+.end
+
+.note diskcache
+.title Disk cache
+Disk ke$ diye okunur. Hafizadan bir miktar ayirip disk i$lemlerini hizlandirma
+teknigidir. DOS icin ba$lica disk cache programlari arasinda SMARTDRV, NCACHE2
+ve PC-CACHE gelir...
+.end
+
+.topic DOS
+Wolverine Dos tabanli bir program oldugundan en guzel Dos'ta cali$maktadir.
+Tam gaz cali$masi icin hafizaya bir {disk cache:diskcache} yuklemeniz faydali olur.
+.end
+
+.topic Windows
+Wolverine Windows 95 altinda oldukca fazla denenmi$tir ve bazi video
+driver uyumsuzluklari di$inda hic bir problemle kar$ila$ilmami$tir.
+Win95 altinda en yuksek performans icin paketle gelen W.PIF'i kullanmanizi
+oneririz.
+
+Windows 3.1 altinda ise en az Windows 95'te cali$tigi kadar iyi cali$acagi
+ongorulmektedir. $imdiye kadar herhangi bir sorun ya$anmami$tir...
+.end
+
+.topic os2
+Wolverine CPU payla$imi dahil tum ozellikleriyle OS/2'yi
+desteklemesine ragmen bazi ince ayarlar sisteminizi daha da
+guzelle$tirebilir...
+
+I$te Hakan Koseoglu'nun katkilariyla ortaya cikan ideal OS/2 ayarlari:
+
+ DOS_BACKGROUND_EXECUTION = OFF
+ DPMI_MEMORY_LIMIT = 4096
+ EMS_MEMORY_LIMIT = (minimum)
+ HW_TIMER = OFF
+ IDLE_SECONDS = 0
+ IDLE_SENSITIVITY = 2
+ INT_DURING_IO = OFF
+ SESSION_PRIORITY = 1
+ XMS_MEMORY_LIMIT = (minimum)
+
+.end
+
+.note prompt
+.title DOS Prompt nedir?
+Genelde C:\> diye gorunur ve urkutur. Sizin komutlar girmenizi saglar.
+Programdan cikmadan i$lerinizi halledebilmeniz icin birebirdir.
+.end
+
+.topic keymask
+
+ Kullanilan tu$lar
+
+ F1:
+O an bulundugunuz boyutla ilgili aciklayici bilgiyi ekrana getirir.
+Zor durumda kaldiginizda basmaktan cekinmeyin.
+
+ Klavyenin en sagindaki '+' tu$u:
+Pencereler arasi gezinmenizi saglar.
+
+ Klavyenin en sagindaki '-' tu$u:
+Iki pencere arasinda gidip gelmenizi saglar. Kullanimi zordur. Nasi oldu
+onu da hatirlamiyom.
+
+ Alt-F4:
+Aktif pencereyi kapatir.
+
+ F5:
+Pencereyi olabildigi kadar buyutur. Eger zaten buyukse eski haline getirir.
+
+ Ctrl-F5:
+Pencereyi klavye ile ta$imanizi saglar.
+
+ Ctrl-F6:
+Pencereyi klavye ile buyultup kucultmenizi saglar.
+
+ Esc:
+Cogu zaman aktif pencereyi kapatir. Eger kapatmazsa Alt-F4'u deneyin.
+
+ Alt-D:
+Hemen en yakin {dos prompt:prompt}'una cikar. Geri donmek icin exit
+yazarsiniz.
+
+ Alt-X:
+Programdan ani ciki$ saglar. Cikmadan once acik dosyalariniz otomatik
+kaydedilir.
+
+.end
+
+.topic email
+Bana ula$abileceginiz e-mail adresleri:
+
+ HiTNeT:
+ Sedat Kapanoglu, 8:103/119
+
+ Internet:
+ ssg@esk.net.com.tr
+ ssg@energy.ogu.edu.tr
+
+ (not: {HiTNeT} her zaman daha iyidr)
+
+.end
+
+.note HiTNeT
+.title HiTNeT (Hi! Turkiye NeT)
+1992'de ufak ve amator bir net olarak kurulan HiTNeT gun gectikce buyumu$
+ve Turkiye'nin EN POPULER ileti$im agi olmu$tur. Duzinelerce mesaj alani
+uzerinden 100'lerce ki$inin ce$itli konularda konu$tugu bu ileti$im agi
+yeni kurulan daha duzenli ileti$im aglarina ragmen popularitesini ve
+sicak ortamini kaybetmemi$tir. Wolverine, en iyi performansi HiTNeT
+uzerinde vermektedir. ;-)
+.end
+
+.topic shareware
+Wolverine, {HiTNeT} kullanicilarinin inanilmaz beta test performansi
+sayesinde hatalarindan oldukca siyrilarak bu shareware version'a ula$mayi
+ba$armi$tir.
+
+Ne kadar hatasiz oldugunu du$unsek te ozellikle bazi kisitlamalari
+bilmenizde fayda var:
+
+ - 16,380 mesajdan fazlasi sagliga zararlidir...
+
+Buldugunuz hatalari bana {e-mail:email} yoluyla bildirirseniz
+programin "contributors" kismina girme $ansiniz oldukca yukselir.
+
+.end
+
+.note download
+.title DL (DownLoad)
+Baglandiginiz sistemde varolan bir dosyayi kendi sisteminize aktarma
+i$leminin tumune verilen ad.
+.end
+
+.note upload
+.title UL (UpLoad)
+Kendi bilgisayarinizda varolan bir dosyayi baglandiginiz sisteme
+gonderme i$lemi.
+.end
+
+.note UUEncoded
+.title UUEncoded
+Binary bir dosyanin mesaj aglari uzerinden transferi icin legal
+ascci text'e donu$turulmu$ hali. Bu dosyalar orijinallerinden 1/3
+oraninda daha buyuk olurlar.
+.end
+
+.note sdDLDir
+.title Gelen paketler
+BBS'ten download ettiginiz dosyalar hangi directory'ye atiliyorsa o
+directory'nin adini yazmalisiniz. Aksi takdirde Wolverine sizin
+o guzel mesaj paketlerinizin nerede oldugunu bulamaz ve uzulursunuz.
+.end
+
+.note sdULDir
+.title Cevap paketleri
+Gondereceginiz cevap paketlerinin konulacagi directory. Genelde terminal
+programinin upload directory'sine ayarlanir. Fakat bu $art degildir.
+.end
+
+.note sdEditCmd
+.title Editor komutu
+Bir $ahsa cevap veya bi$iiler yazacaginiz zaman kullanacaginiz programi
+belirtir. Bu EDIT, TURBO, Q, A gibi programlar olabilir.
+.end
+
+.note sdFilterCmd
+.title Filtre komutu
+Mesaj filtrelemede kullanacaginiz filtreleri buraya yazarsiniz.
+Birden fazla filtreyi aralarina + koyarak kullanabilirsiniz. Ornegin yazdiginiz
+mesajlarin once F_UCUK ile sonra da F_SIGN ile i$lenmesini istiyorsaniz
+F_UCUK+F_SIGN yaziniz... bu satirin yanindaki butoncuga basarak i$inizi
+daha kolay halledebilirsiniz...
+.end
+
+.note sdQuoteStr
+.title Alinti mesaji
+Buraya yazdiginiz mesajlarda alinti yaptiginiz ki$i ile bilginin
+mesajlarinizda nasil gorunecegini belirleyen satiri girersiniz.
+Bu satirda kullanabileceginiz ozel i$aretler vardir bunlar:
+
+ @F: Alinti yapilan mesajin "Kimden" alani.
+   @F1: adi...
+   @F2: soyadi...
+ @T: Alinti yapilan mesajin "Kime" alani.
+   @T1: adi...
+   @T2: soyadi...
+ @S: Alinti yapilan mesajin konusu.
+ @D: Alinti yapilan mesajin tarihi ve saati.
+   @D1: sadece tarih...
+   @D2: sadece saat...
+ @M: Bir satir a$agi atlanir.
+
+.end
+
+.note sdPassword
+.title Giri$ $ifresi
+Bu $ifre wolverine'e her giri$inizde sorulacak bir $ifredir. Kullanim
+alani genelde yetiskin_mizah alanini okumak isteyen karde$inizi (veya yegeninizi)
+engellemektir. $ifreyi yazarken dikkatli olun cunku yazdiginiz ne
+ekranda gorunecek ne de ikinci kez sorulacaktir. $ifreyi kaldirmak icin
+$ifreyi silmeniz yeterli.
+
+.end
+
+.note sdAreaSort
+.title Mesaj alanlarini sirala
+Mesaj alanlarini alfabetik siraya ve turune gore siralar. Normalde mesaj
+alanlari BBS'lerden yakla$ik rastgele bir sirayla gelir ve anla$ilmaz
+olurlar. Yani bu secenegi acik birakmaniz faydaniza. Bazi SysOp'lar kendi
+mesajlarini Wolverine'le okurken siralama olayindan tiksinirler. Ondan
+dolayi oyle.
+.end
+
+.note sdFallenAngel
+.title FallenAngel ozelligini kullan
+Oncelikle fallenAngel ozelligi nedir... FallenAngel ozelligi, mesajlarini
+mouse yerine klavye ile okuyanlarin onunde duran rahatsiz edici mouse
+pointer'inin otomatik olarak ortadan kaybolmasini saglar. Bir kac tu$ vuru$u
+yaparsaniz mouse, sizin bundan boyle ona dokunmayacaginizi sanar ve kaybolup
+gider. Halbuki yaniliyordur ama napcaksin, mukadderat.
+.end
+
+.note sdAskPost
+.title Mesaji kaydediim mi diye sor
+Her mesaj yazdiginizda size mesajin kaydedilip kaydedilmeyecegini sorar.
+Iki saat mesaj yazip sonra "yok bu olmadi" diyenlerdenseniz kullanin.
+.end
+
+.note sdPersBeep
+.title Ki$isel mesajlarda cik cik
+Mesajlarinizi okurken size ozel bir mesajla kar$ila$tiginizda gozden
+kacirmamaniz icin bip sesi cikarir...
+.end
+
+.note sdReplySafe
+.title Yazdigim mesajlari koru!
+Bu secenek acik oldugu takdirde Wolverine siz her mesaj yazdiktan sonra
+cevap pakedinizi tekrar olu$turur. Boylece herhangi bir elektrik kesintisi
+veya win95 cokmesinden en az zararla kurtarmi$ olursunuz. Bu secenek
+kapali oldugunda acikta bulunan mesajlar Wolverine'e bir sonraki
+giri$inizde otomatik olarak silinir. Kisacasi bu secenegi acik tutmanizda
+fayda var.
+.end
+
+.note sdSortTaglines
+.title Tagline'lari sirala
+Ekrana gelen tagline listelerinin alfabetik olarak siralanip siralanmayacagini
+belirler. Eger bu secenegi kapatirsaniz tagline'lar tagline dosyasindaki gibi
+gosterileceklerdir.
+.end
+
+.note sdAutoPers
+.title Otomatik ki$isel mesaj ara
+Her mesaj pakedi actiginizda icinde bulunan ki$isel mesajlarin otomatik
+olarak onunuze getirilip getirilmeyecegini belirler.
+.end
+
+.note sdNoVivaLaSewage
+.title Serbest alinti olayi
+Wolverine'in "Viva la sewage" (TM) ozelligi, mesajlarinizda
+alinti orani %80'i gectiginde mesajlarinizi yazmanizi engeller. Bu
+secenegi actiginiz takdirde mesajlarinizda alinti orani kontrol edilmez.
+.end
+
+.note sdTaglineUsage
+.title Tagline kullanimi
+Tagline kullanimini belirler. Eger "kullanma" secenegini secerseniz
+mesajlarinizin sonuna tagline eklenmez. "her seferinde sor" secenegini
+i$aretlerseniz, her mesaj yazi$inizda onunuze tagline'larin bir listesi
+gelir ve burdan secmeniz istenir. "otomatik koy" secenegini secerseniz
+mesajlariniza rastgele bir tagline eklenir.
+.end
+
+.topic SetupDialog
+
+Burada programla ilgili ce$itli ayarlari yapmakla yukumlusunuz. Bazi
+secenekler kapalidir. Bu secenekler kayitli kullanici oldugunuz
+takdirde acilacaktir. Neyse detayli aciklamasini istediginiz kisma basin da
+olayi kisa yoldan bitirelim diyorum.
+
+ {Gelen paketler:sdDLDir}
+ {Cevap paketleri:sdULDir}
+ {Editor komutu:sdEditCmd}
+ {Filtre komutu:sdFilterCmd}
+ {Alinti mesaji:sdQuoteStr}
+ {Giri$ $ifresi:sdPassword}
+ {Mesaj alanlarini sirala:sdAreaSort}
+ {FallenAngel ozelligini kullan:sdFallenAngel}
+ {Mesaji kaydediim mi diye sor:sdAskPost}
+ {Ki$isel mesajlarda cik cik:sdPersBeep}
+ {Yazdigim mesajlari koru!:sdReplySafe}
+ {Tagline'lari sirala:sdSortTaglines}
+ {Otomatik ki$isel mesaj ara:sdAutoPers}
+ {Serbest alinti olayi:sdNoVivaLaSewage}
+ {Tagline kullanimi:sdTaglineUsage}
+
+.end
+
+.topic PacketOpenDialog
+
+Ustte BBS'ten aldiginiz mesaj paketlerin bir listesi bulunur... Burada
+pakedin adi, boyu, tarihi gibi bilgilerin yaninda ek bir kac bilgi daha
+vardir, nedir bunlar? $unlardir:
+
+Top = Paketteki toplam mesaj sayisini
+
+Okm = Okumadiginiz kac mesaj kaldigini
+
+Okck (Okcik diye okunur) = Ozel olarak okuyacaginiz kac mesaj oldugunu
+
+Cvck (Civcik diye okunur) = Cevaplanacak kac mesajin oldugunu
+
+Size = Size ozel kac mesajin oldugunu gosterir...
+
+Altta duran listede ise hic paket acmadan (hatta elinizde hic paket yokken)
+mesaj yazabileceginiz sistemlerin listesi gorunur... Oyledir...
+
+Button'lara gelince:
+
+Manyak Mesaj Ara!: Bir mesaji tum paketlerde arar...
+Tazele butonu: paket listesini tekrar olu$turur...
+
+(Pakedi ac ve sil butonlarinin aciklamalari icin Meydan Larousse cilt 18
+(PAK-STE) sayfa 354'e bakiniz)
+
+.end
+
+.topic IllegalSetup
+Setup dosyasi ya ucmu$ ya da eski bi version'dan kalma... Wolverine 2.00
+version'indan itibaren yeni setup yapisi sayesinde 2.x ve ustundeki tum
+setup dosyalariyla otomatik uyum saglayabilmektedir. Fakat 1.05 ve a$agisina
+ait ayar dosyalari 2.00 tarafindan kurtarilamayacaktir.. Yine de birakin
+Wolverine sizin icin "en iyisini" yapsin...
+
+(btw: "Alexander the Great" / Iron Maiden caliyo... helaal)
+.end
+
+.topic HelpOnHelp
+
+Wolverine'in context sensitive hypertext yardim sistemine ho$ geldiniz...
+
+kullanili$i cok basittir: mouse'la bi$iilerin uzerine gelirsiniz ve
+bi$iiler olur... hayat boyle basit bir dongude surer gider...
+
+geriye gidin bakalim...
+
+.end
+
+.topic about
+
+ Wolverine - En bi off line mail reader
+
+Herbi$eyi yapan:
+
+ Sedat KAPANOGLU
+
+FatalVision development:
+
+ Sedat KAPANOGLU
+ Meric SENTUNALI
+
+Bi yerden katki saglayanlar:
+
+ Korhan ADILIN
+ Alpaslan ARMUTLU
+ Burc ARPAT
+ Tuncay CELIK
+ Hakan KOSEOGLU
+ Mehmet OZTURK2
+ Tufan SEZER
+ Volkan Ihsan TORE
+ Mustafa TUFAN
+
+Hata bulanlar, test edenler, ayri bi katki olayi:
+
+ Zafer AKANSEL
+ Mehmet Kaan BALOGLU
+ Gurkan CETIN
+ Atakan CINAR
+ Emre ERKMEN
+ Doruk FISEK
+ Ekin MEROGLU
+ Tolunay ORKUN
+ Umut OZKALYONCUOGLU
+ Necdet YUMURTACI
+ Ant SENGELLI
+
+Benim de ismim bi yerde gecsin diyenler:
+
+ Alpay ZEREN
+
+.end
+
+.note BBS
+.title BBS (Bulletin Board System)
+Modem uzerinden mesajla$ma, dosya ar$ivine eri$im, online oyunlar gibi
+hizmetler sunan sistemlerdir... BBS'in dogru telaffuzu bi-bi-es $eklinde
+olup yanli$ telaffuzu be-be-se $eklindedir.
+.end
+
+.topic AreaListWindow
+
+ $oyle ki:
+
+Burada mesajlarin konularina (hedef kitlelerine, yerine zamanina) gore
+siniflandirildiklari alanlari gormektesiniz... Belli bir alanda o alanla
+ilgili konular konu$ulur... Local alanlar sadece {BBS}'inize baglanan
+kullanicilar tarafindan gorulebilir... Echo alanlar ise o net'in bagli
+oldugu tum {BBS}'lerin kullanicilari tarafindan okunabilir... Netmail
+alanlari ise ki$isel yazi$malarda kullanilir...
+
+Alan listeleri iki kisma ayrilmi$tir... Normalde icinde mesaj olan alanlari
+gorursunuz... Alan listesinin hemen ustundeki button'lari kullanarak mesaj
+icermeyen alanlara da gecebilirsiniz... Klavye agirlikli cali$anlar bu
+geci$ler icin 1 ve 2 tu$larini kullanabilirler...
+.end
+
+.note forward
+.title Mesaj Forward Etme olayi
+Eger ce$itli sebeplerden oturu o anda okudugunuz mesajin ba$ka bir alanda
+da ilgi cekecegini (veya i$e yarayacagini) du$unurseniz o mesaji oradan
+oraya kopyalamaya message forwarding yani hep beraber: Mesaj Forward Etme
+deniir...
+.end
+
+.note netmail
+.title Netmail
+Netmail'ler ki$iye ozel gonderilen mesajlardir. Netmail yazdiginiz
+mesajlari gonderdiginiz ki$iden ba$kasi okumaz.
+.end
+
+.note mwReply
+.title Cevapla
+Baktiniz mesaj ilgi cekici ve cevaplanmasi gerekiyor... Hic durmayin
+cevaplayin onu... Kendinizi cevaplamanin verdigi co$ku selinin kucagina
+birakin...
+.end
+
+.note mwNetmail
+.title Netmail
+Bir $ahsa netmail cevap verdiginizde verdiginiz cevabi ondan ba$kasi
+okuyamaz... Bu button o $ahsa netmail cevap vermenizi saglar... Eger
+BBS'inizde birden fazla netmail alani varsa size uygun olani seciniz...
+.end
+
+.note mwWrite
+.title Yeni yaz
+Yeni bi mesaj yazmak istediginizde bu button'u secersiniz ve tum dertleriniz
+bir anda yok olur... I$te o an, ruhunuzun Wolverine kullanmak icin ula$masi
+gereken olgunluk seviyesine ula$tigi ani gosterir... O an tum zaman durur ve
+butun ustun varliklar sizin bu minicik gezegende olu$turudugunuz minik pariltiyi
+farkederler... I$te o an degi$im anidir...
+.end
+
+.note mwSave
+.title Kaydet
+Ilginizi ceken mesajlari ayrica bir text file'a bu button'la kaydedebilirsiniz.
+.end
+
+.note mwForward
+.title Forward
+Ba$ka alanda da ilgi gorecegini tahmin ettiginiz mesajlari (ben bunu bi
+yerden hatirliyom neyse) bu button'la o alana atarsiniz... Boylece insanlar
+bunu gorurler ve daha cok bilgilenirler...
+.end
+
+.note mwAdopt
+.title Tagline'i kap
+Her mesajin sonunda bir tagline vardir... Bu tagline'i caniniz almak isterse
+cekinmeyin alin... Ilerde kullanirsiniz hem... Boyle guzel bir ozelliktir
+bu da...
+.end
+
+.note mwPentagon
+.title Pentagon
+Pentagon dugmesi cok ozel bir dugmedir... Bu dugmeye basinca Wolverine
+modeminizin kontrolunu ele gecirir ve ona ozel komutlar yollayarak uydu
+ileti$im kanallarini aktif hale getirir... Uydu ileti$imi ile Pentagon'un
+ana binasina baglanilir ve oradaki kullanici bilgilerine eri$im hakki
+elde edilir... Dikkatli kullaniniz...
+.end
+
+.note mwThen
+.title Sonra
+Bir mesaj gordunuz... Mesaj da harbiden ilgi cekici bi$ii... Okumak istiyosunuz
+fakat daha once yapmaniz gereken i$ler var... I$te boyle durumlarda Sonra
+button'una basiyosunuz ve o mesajla ilgili hatirlamak istediginiz aktiviteleri
+i$aretliyosunuz...
+.end
+
+.note mwUUDecode
+.title UUDecode
+Bazi mesajlar, iclerinde uuencoded olarak dosya ihtiva edebilmektedirler.
+Bu dosyalari UUDecode butonu ile acabilirsiniz...
+.end
+
+.note mwOburune
+.title Oburune
+Bu dugmeye basinca mesaji gonderene cevap atmak yerine, mesajin gonderildigi
+ki$iye cevap atarsiniz. Mesela From: Ablak To:Kelek $eklinde bir mesaji
+okurken "Cevapla" dugmesine basarsaniz Ablak'a, "Oburune" dugmesine
+basarsaniz Kelek'e mesaj atarsiniz. Boyle bi$eydir bu da...
+.end
+
+.note mwPrint
+.title Yazdir
+Sonsuza dek duvarinizda asili kalmasini istediginiz bir mesaj mi var?
+Kopeginize verecek yemeginiz mi yok? Kagittan ucak mi yapmak istiyorsunuz?
+I$te yazdir butonu tum bu dertlere deva olmakta direniyor... Bu butona
+basar basmaz en yakin printer'dan okumakta oldugunuz mesajin ciktisi
+alinir... Boyle bi$eydir bu da...
+.end
+
+.note mwAra
+.title Ara
+Mesaj icinde bir yazinin aranmasini saglar.
+.end
+
+.topic MsgWindow
+
+I$levini merak ettiginiz button'u a$$aadan secerseniz sorununuz cozulur:
+
+ {Cevapla:mwReply}
+ {Netmail:mwNetmail}
+ {Oburune:mwOburune}
+ {Yeni yaz:mwWrite}
+ {Kaydet:mwSave}
+ {Forward:mwForward}
+ {Tagline'i kap:mwAdopt}
+ {Pentagon:mwPentagon}
+ {Sonra:mwThen}
+ {Yazdir:mwPrint}
+ {UUDecode:mwUUDecode}
+ {Ara:mwAra}
+
+.end
+
+.topic ExecError
+Hmm... cali$tirilan program hata mesaji dondurmu$... eger cali$tirilan
+programin i$ledigi dosya bozuk veya sorunlu bi$eyse bu hata normaldir...
+dosyanin yenisini bulmaya cali$in... (nasi attim sorumlulugu ustumden ama)
+.end
+
+.topic OutOfMem
+Ya cok az hafiza ya da cok fazla acik pencere var... (oha)... arkadan
+bi kac tane kapamayi deneyin... goreceksiniz ki i$e yarayacak... yok
+hic olmazsa cikin programdan... temiz temiz bir daha girin...
+.end
+
+.topic FileError
+Dosya i$lemleriyle ilgili bir hata var... Multitasking ortamlarda programin
+ayni anda birden fazla kopyasi aciksa veya hard diskte yer yoksa veya
+disketten cali$iliyor ve write protect acik unutuluyorsa boyle $eyler
+ba$iniza gelebilir... metin olun... YIlmayin... SSG sizi seviyor...
+.end
+
+.note tagline
+.title Tagline
+Mesajlarin sonuna eklenen ozlu sozlere denir. Tagline'in belli bir amaci
+yoktur. Sadece mesaji okuyanin begendigi tagline'lari alip saklamasina
+ve boylece onlarin cogalmasina yarar. Bir tagline herhangi bir$ey olabilir.
+Esprili tagline'lar ho$ olur.
+.end
+
+.topic TaglineSelectDialog
+
+Bu ekranda mesajiniza ili$tirilecek {tagline}'i secersiniz. Bu {tagline}'lar
+W.TAG isimli dosyada tutulur. Degi$tirmek icin herhangi bir text editor
+kullanabilirsiniz.
+
+Window'u kaparsaniz veya "Amaan uff" butonuna basarsaniz mesajiniza
+{tagline} konulmaz. Ama eski bir du$unur ne demi$: "Hin tagline bin katur
+dirsak, bir katur harmu da kirsak"... Yani: "Ben benden iceru bir tagline
+benden iceru"... Bi daha cevirirsek: "Demek istiyom ki tagline iyidir"
+.end
+
+.topic ManualEntry
+Burada kafaniza esen {tagline}'i girebilirsiniz. Bu o anki ruhsal durumunuz,
+gunluk doviz kuru, hayatin anlami veya kopeginizin adi olabilir. Eger
+kopeginiz yoksa kedinizin adini da yazabilirsiniz.
+.end
+
+.topic NoWrite
+Hmm... Ileti$im aglarinda bazi alanlar vardir ve bunlar sadece o alana
+yazma yetkisi olanlar yazabilirler... Gorunu$e gore sizde bu yetkilerden
+yok... Ayrica mesajla$mada kullandiginiz {BBS}'e uye
+olmadiginiz icin size yazma yetkisi vermemi$ olabilirler.. En kisa
+zamanda uye olun...
+.end
+
+.topic AreaChange
+$u anlamsiz kainatta her$ey bir coku$e dogru ilerlerken sizin burada
+bir alan degi$tirmek icin gosterdiginiz caba takdire $ayan dogrusu...
+Siz ya$amaya layiksiniz..
+.end
+
+.note shawsHank
+.title The Shawshank Redemption
+ATV'de gecen gun "Esaretin Bedeli" adiyla oynatilan film hayatimda
+gordugum en iyi filmlerden biriydi... Eger bir daha cikarsa sakin
+kacirmayin...
+.end
+
+.topic ReplyListWindow
+Burada yazdiginiz mesajlarin bir listesi gorunur... Burada dilerseniz
+mesajlariniz uzerinde son rotu$lari yapabilirsiniz... Yapin bi$eyler i$te
+yav... hayat zaten kisa... gunlerimizi guzel gecirelim...
+.end
+
+.note wheredidthischickengo
+.title Eski printer setup'i hakkinda
+Eski printer rutinlerinin Win95 altinda uyum sorunlari vardi. En temizi
+ve en guzeli bu oldu inanin bana. Wallahi oyle..
+.end
+
+.topic PrinterSetup
+Buraya cikti almak istediginizde hangi device'a yazilacagini belirlersiniz.
+Eger PRN yazarsaniz DOS'un standart printer ciki$i kullanilir. Eger
+printer'iniz COM2'deyse COM2 yazin... Yok eger dosyaya cikti almak
+istiyorsaniz direk dosyanin adini yazin...
+
+Bkz: {Ulan eski guzelim setup nereye gitti?:wheredidthischickengo}
+.end
+
+.topic ReplyWindow
+$u anda cevaplarinizi okumaktasiniz. Ne guzel di mi? Sizin kendi ellerinizle
+yazdiginiz mesajlar gozlerinizin onunde. Aaah ah...
+.end
+
+.topic NewPacket
+Yeni cevap pakedi olu$turdugunuz zaman eski cevaplariniz silinir. Eger henuz
+cevaplarinizi BBS'e gondermediyseniz vazgecin yol yakinken.
+.end
+
+.topic UnreadDialog
+Okumayi unuttugunuz bi kac mesaj var gordugunuz gibi. Okuma $ansiniz hala var.
+Yok eger okumayacam derseniz "Sonra okurum" butonunu secin. Yok onlari
+"okundu" i$aretlemek istiyorsaniz (sIkIci personal mesajlarda olur genelde)
+"Okudum farzet" butonunu secin. Daha ne kadar acikliyim yav... oof of...
+.end
+
+.topic Benefits
+Kayitli kullanici olmanin guzel yanlari:
+
+1) Kendinizi rahatlami$ hissediyorsunuz. Ayrica programcinin da kendini
+rahat hissedecegini de bilmenin verdigi bi extra rahatlik puani ile
+double rahat moduna geciyorsunuz. Bu mod monitorunuzde titreme yapar.
+
+2) Birgun sabah uyandiginizda bakiyorsunuz ki eskiden cali$mayan adres
+defteri, manyak mesaj ara, renk secimi, tagline kumanda paneli, pentagon
+vs vs gibi ozellikler cali$ir hale gelmi$!! Bir mucize!
+
+3) Turkiye'de programciligin seviyesini yukseltiyorsunuz. Odediginiz her
+kuru$ insanlarin gozundeki programci imajini biraz daha yukseltiyor. Bizim
+sayginligimiz artarken sizin de cepleriniz bo$aliyor olsun o kadar... :)
+
+4) Major version upgrade'lerde (mesela 1.xx'ten 2.xx'e geci$te) fiyat
+indiriminden faydalaniyorsunuz. Ayrica varolan key dosyaniz .00'dan .99'a
+kadar olan tum alt version'larda destekleniyor.
+
+5) Fiyat arti$larindan etkilenmiyorsunuz. Bu ne demek. Bu major upgrade
+ucretinin sabit olmasi demek. Fakat esas 20$'lik kisim her an artabilir
+ruhunuz duymaz.
+.end
+
+.topic Registration
+Kayitli kullanici olmanin 3 adimi:
+
+1. I$ bankasi 4400.2277977 no'lu hesaba 20$'in o gunku kur kar$iligini
+yatirin. Makbuz fotokopisini (222)2201201'e fax'layin.
+
+2. {E-mail adreslerimden birine:email} W.Reg isimli formu doldurup mesaj
+olarak yollayin.
+
+3. Ve en gec bir hafta icinde elinize ula$acak olan registration key dosyasini
+bekleyin... i$te bu kadaar
+
+Bkz: {Kayitli kullanici olunca ne oluyor:benefits}
+.end
+
+.topic TaglineInputDialog
+Gulum bak "yeni tagline gircem" dedin... $imdi de cikardik onune dialog
+box, bekliyoz senin tagline'ini... cok uzatma da gir... ohoooo...
+.end
+
+.topic AskPost
+bi mesaji yazmi$siniz ve yazdiginiz mesaji iptal etme $ansiniz hala mevcut.
+Eger "kaydet" secenegini secerseniz mesajiniz kaydedilir. "kaydetme"
+secenegini secerseniz mesajiniz kaydedilmez. Ben niye yaziyom bu help
+text'leri yaa?
+.end
+
+.topic MMA
+Manyak Mesaj Ara! ozelligi, bir mesaji bu tum paketlerde
+aramanizi saglar. Program mesaji buldugu pakedi sizin icin acar ve size
+o mesaji okutur. Ne iyi bir programdir $u wolverine.
+.end
+
+.note tagfile
+.title Tagline dosyasi hangisi ki?
+W.TAG isimli dosyada tagline'lariniz tutulur...
+.end
+
+.topic TaglineManagerDialog
+Burada {tagline}'larinizi duzenlersiniz... Yaptiginiz degi$iklikler direk
+olarak {tagline dosyaniza:tagfile} i$lenir...
+.end
+
+.note menufile
+.title Menu dosyasi
+W.MNU isimli dosya olur kendileri...
+.end
+
+.topic MenuWindow
+Genel menusu programin ce$itli kisimlarina hizla ula$abilmenizi saglar.
+Bu menunun diger bir avantaji da, dilediginiz programin bu menude ek
+olarak yer alabilmesidir. {Menu dosyasi:menufile} uzerinde yapacaginiz
+degi$ikliklerle kendi programlarinizi eklersiniz. Eklediginiz programlari
+cali$tirmak icin isminin yanindaki dugmeye veya Alt-(secenegin numarasi)'na
+basabilirsiniz...
+
+.end
+
+.topic PersonDialog
+Adres defteri, Wolverine'in yillardan gunumuze kadar muammasi cozulememi$
+kisimlarindan biridir. 1867'de Nuitari adli bir kahinin "Insanlarin Netmail
+adreslerini ve bir kac ek bilgisini saklamaya yarayan bi$ii" $eklindeki
+yorumu di$inda henuz elde edilmi$ somut bir kanit yok. Nasa ba$kani Jeffrey
+Gommerson yaptigi aciklamada "Elimizdeki beta version 5 milyon yil
+oncesine ait, fossille$mi$ disketin icindeki bilgileri okutmak yillarimizi
+aldi fakat sonunda ba$ardik. Bilim adamlarimiz icindeki $ifreli bilgileri
+cozmeye cali$iyorlar. Geli$me kaydettikce basin kanaliyla duyuracagiz" dedi.
+.end
+
+.topic PersonNotFound
+Pentagon'un veri tabaninda yapilan arama i$leninde aradiginiz $ahis
+hakkindaki bilgilerin varolmadigi saptandi. Wolverine kullanicilari
+Pentagon veri tabanina direk mudahele edebilme hakkina sahiptir. Bu izin
+Pentagon'un IC8237-A lisansiyla verilmi$tir. Herhangi bir sorun oldugunda
+dI$i$leri bakanligina ba$vurunuz.
+.end
+
+.topic UUDecodePrompt
+Mesaj icinde gonderilen dosyanin nereye hangi isimle acilacagini degi$tirme
+hakkina sahipsiniz... Eger direk enter'a basarsaniz ongorulen isim kabul
+edilir...
+.end
+
+.topic NetFlagChangeDialog
+Burada gonderdiginiz netmail'in bazi ozelliklerini degi$tirme $ansina
+sahipsiniz. Bazi ozellikler SysOp tarafindan kapatildiginda bu ozelligi
+degi$tirmeniz imkansizliga dogru yakla$ir ve o noktada sonumlenip bu
+boyuttan ayri$ima giri$ir. Hadi bakalim...
+.end
+
+.topic TextSearchDialog
+Mesaj icinde aramak istediginiz kelimeyi buraya yazin... Bu kadaar...
+.end
+
+.topic hadileen
+
+
+
+        HADi LEEEEEEEEEEEN!!!
+
+.end
+
+.topic AlarmSetupDialog
+$imdi burada alarm'in hangi saatte size bi$eyler yapacagini belirlersiniz.
+Alarm'in cali$ma zamani olarak iki farkli giri$ yapabilirsiniz. Orneklerle
+aciklamak her zaman iyidir:
+
+Mesela alarm'in sizi 21:05'te uyandirmasini istiyorsaniz 21:05 yazmaniz
+yeterli. Yok eger alarm'in sizi 10 dakka sonra uyandirmasini istiyorsaniz
+o zaman sadece 10 yaziyorsunuz.
+
+Anlamadiginiz nokta varsa:
+{Yeni ba$layanlar icin bilgisayar dersleri:hadileen}
+.end
+
+.topic ParamInputDialog
+Burda da cali$acak olan komut satirina gecilecek parametreleri
+belirlersiniz... Ne ho$ ve bir o kadar da guzeldir burasi da... Pek
+diyecek bi$ii yok... Devam edin...
+.end
+
+.topic FileViewOpenDialog
+"Bakici", di$ardan herhangi bir dosyayi gostermeye yarayan bir
+programdir... Merak ettiginiz dosyalari size gosterir bi$iiler yapar...
+$imdi buraya bakmak istediginiz dosyanin adini girmeniz gerekiyor...
+.end
+
+.topic NoDLAreaWarn
+Okumadiginiz alanlara mesaj yazmaniz anormal davrani$lar sinifina girmekte.
+Cunku yazdiginiz mesaja ayni alandan cevap yazilirsa okuyamayacaksiniz.
+Eger bu alani sonradan okumayi du$unuyorsaniz veya size cevap gelip
+gelmemesi kemiklerinizi sizlatmiyorsa devam edin...
+.end
+
+.topic NoOLCSupport
+$u anda kullanmakta oldugunuz paket off-line alan konfigurasyonunun
+desteklenmedigi bir formata sahip. (QWK gibi).. Bu tur alan konfigurasyonlarini
+BBS'inize baglanip oradaki alan konfigurasyon seceneklerini kullanmaniz
+gerekiyor. Iyi $anslar.
+.end
+
+.note replypacketreasons
+.title uff
+Eger birden fazla ki$i ayni pakede yazabilseydi, herhangi biri icin
+ba$kasinin agzindan mail yazma $ansi dogacakti. Mesela Mustafa Sandal
+"From: Sedat Kapanoglu" $eklinde mesajlar gonderebilecekti. Teorikte
+mumkun olmasina ragmen pratikte esnek bir cozum imkansiz gibidir. Tek
+yol ayri cevap paketleri kullanmak.
+.end
+
+.topic ReplyPacketConflict
+Bir cok {sebepten:replypacketreasons} dolayi cevap paketlerine birden
+fazla ki$i mesaj yazamaz. Ayri cevap paketleri olu$turulmasi gerekir.
+Eger ailede birden fazla ki$i ayni Wolverine'i kullaniyorsa her kullanici
+icin Wolverine'i cali$tiran bir BAT dosyasi yaratin.
+
+bkz: {ayrintili ornekler:multiuserexamples}
+.end
+
+.topic multiuserexamples
+Diyelim ki ayni evde oturan iki kiz var. Ikisi de bekar. Aylin i$letme
+bolumunde okuyor ve ya$i 23. Sevilay ise 21 ya$inda ve mimarlikta okuyor.
+$imdi Aylin'in babasi zengin, fabrikator, babasinin biskuvi fabrikasi
+var ve o yuzden Aylin'in bir adet US Robotics'li bilgisayari var. Modem
+Sportster ve v42bis destekliyor. Aylin, Wolverine 2.00 kullaniyor. Bir gun
+Sevilay okul ciki$i eve geliyor ve Aylin'i mesaj okurken yakaliyor ve bu
+i$i Aylin'den kendisine ogretmesini istiyor. Aylin yakla$ik iki hafta suren
+bir cali$ma sonucu Sevilay'a mesaj okumayi ogretiyor. Fakat ikisinin bir
+problemi var: ayni cevap pakedine mesaj yazmak durumunda kaliyorlar. ortalik
+corbaya donuyor. Bunun cozumu $udur:
+
+Aylin normalde W yazarak Wolverine'i cali$tiriyordu. Aylin yine boyle fakat
+Sevilay cali$tirirken $oyle cali$tiracak:
+
+ C:\W> sevil
+
+SEVIL yazdiginda SEVIL.BAT isimli dosya cali$acak. SEVIL.BAT isimli dosyanin
+icinde ise $u yazacak:
+
+W -cfg:SEVIL
+
+Sevilay ayarlarini oyle degi$tirecekki yaratilan cevap paketleri Aylin'inkinden
+ayri bi directory'de olacak.
+
+Boyle boyle...
+
+uff benim de kafam kari$ti... Neyse olayin ozeti bu...
+.end
+
+.topic SaveMsgInvalidName
+Wolverine'de kaydettiginiz dosyalar her zaman TXT\ subdirectory'si altina
+kaydedilirler. O yuzden buraya sadece dosyanin adini yazin.
+.end
+
+.topic ColorConfigDialog
+Yav sirf help butonu bo$ta durmasin diye buralara bi$iiler yazmaktan
+gina geldi... Ne diye burda help aliyosunuz yaa? Alla allaaa...
+.end
+
+.topic ArchiverSetupDialog
+Mesaj paketleriniz BBS'ten sIkI$tIrilarak gonderilir. Bu sIkI$mI$ paketleri
+acmak icin Wolverine hazirda bulunan programlari kullanir. Hemen hemen
+herkeste bu programlardan bulunur. Bundan dolayi bu ayarlarla oynamaniza
+pek gerek yoktur. Eger ozel ayar gerekiyorsa da burdan yapin i$te.
+.end
+
+.topic FilterLookup
+Mesajiniz uzerinde kullanmak istediginiz filtreleri burada secersiniz..
+Sol taraftaki liste mesaja uygulanacak filtreleri yukaridan a$agi
+sirasiyla gosterir.
+.end
+
+.topic VivaLaSewage
+Birisine cevap yazarken, cevapladiginiz mesajdan alintilar yaparsiniz,
+bunlar ba$larinda cevapladiginiz ki$inin isminin ba$harfleri bulunan
+"XX> " $eklindeki oneklerle gosterilirler (Cryin'/Aerosmith). Bu alintilar
+cok fazla olurlarsa mesaj paketlerinde $i$melere neden olurlar. Neredeyse
+tum Fidonet tabanli mesaj aglari amator aglar oldugundan o insanlar o
+paketleri ceplerinden para odeyerek transfer ederler. Bundan dolayi biz
+kullanicilarin mesaj boylarina kar$i dikkatli olmasi gereklidir. Mesajlarda
+ise en cok yer kaplayan kisimlar alintilardir. Bu alintilarin konuyla
+ilgisiz kisimlarini editorunuzun satir silme tu$uyla yok edebilirsiniz
+(Cogu editorde bu tu$ Ctrl-Y'dir). Neyse $imdi iyi cocuk olun ve mesajinizin
+gereksiz kisimlarini ayiklayin. Hadi gulum. Canimin ici.
+.end
+
+.topic SearchDialog
+Mesaj arama olayi falan... neyse buranin help text'ini sonra yazarim bi
+ara...
+.end

@@ -1,0 +1,63 @@
+
+
+          - Wolverine - En bi OLR - Language Adaptation Kit -
+
+                   Copyright (c) 1997 Sedat Kapanoglu
+
+
+PREFACE
+~~~~~~~
+Most net users can't understand the "off-line reading" concept at the
+beginning (such as myself) because of the lack of documentation about
+that. Besides if the off-line reader which the user intends to
+use is a bit complicated then the user has no option other than
+crying to the walls.
+
+What does make an OLR complicated? The most important factor that
+determines the success level of interaction between the user and OLR is
+LANGUAGE! If you can't understand a program, you can't do anything.
+
+So, Wolverine as an OLR intends to be user-friendly, overcomes this
+problem with its multilingual support. Since the author himself can't
+develop much variety of languages, he introduces you all the language
+resources of Wolverine and compilers for it to make everything easier.
+
+LEGAL STUFF
+~~~~~~~~~~~
+This kit is provided as public domain. The author shall not be liable
+for anything. Also excuse my lame English.
+
+HOW TO USE THE KIT
+~~~~~~~~~~~~~~~~~~
+Help and language sources are in ASCII format so that you can easily
+change them with a text editor (as I did).
+
+Each language has three components:
+
+  1) Help file (*.TXT which becomes *.HLP after compilation)
+
+  2) Language file (*.LNG which becomes *.LAN after compilation)
+
+  3) Install language file (I_*.LNG which becomes I_*.LAN after compilation)
+
+In the sample resources the format explained clearly. (the level of
+clearance varies :) Comparison between English and Turkish files may be
+helpful.
+
+MAKELAN.BAT is provided to build help and language files easier.
+
+Note: If you're creating language files for your personal use, the
+install language file does not need to be touched. (since it can't be
+put into install pack)
+
+SO
+~~
+If you'd like to share your PERSONALIZED language with others, you may
+send it to me. It will be probably included in the next release.
+
+HOW TO CONTACT
+~~~~~~~~~~~~~~
+HiTNeT  : Sedat Kapanoglu, 8:103/119
+
+Internet: ssg@ogu.edu.tr
+

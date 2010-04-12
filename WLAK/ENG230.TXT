@@ -1,0 +1,860 @@
+; Help file format
+; .topic topicname[=contextnumber]
+;   hyperlinks are shown like {this:linknameofthis}
+; .end
+;
+; .note notename
+; .title notetitle
+; .end
+;
+; "notes" are independent from topics. you may use as much notes as you
+; want in topics, in any order... but be careful not to mess with the
+; sequence of "topics"...
+
+.topic NoContext=0
+There is no help information available on what you're currently doing.
+.end
+
+.topic Contents=1
+
+ {About Wolverine:about}
+
+Usage:
+ {Keyboard:keymask}
+ {The global menu:global}
+ {Filters:filters}
+ {Command-line parameters:cmdline}
+
+System notes:
+ {DOS:dos}
+ {DESQview:desqview}
+ {OS/2:os2}
+ {Windows:windows}
+
+.end
+
+.note esbbs
+.title ES BBS   +90-222-2345869
+ES BBS is located in Eskisehir/Turkiye and provides its' users a huge
+archive of Aviation and Aircrafts files as well as other misc stuff. The
+BBS has messaging ability across HiTNeT, PeaceNet and TurkNet. The
+author Sedat Kapanoglu is the CoSysOp of ES BBS.
+.end
+
+.topic Filters
+Filters are "message processors". Each time you write a message,
+filters that you selected "process" the message. This processing can
+be anything such as appending your signature each message you wrote,
+spell checking and correcting, translating the character set etc. To use
+filters, all you have to do is to activate the filters you want to use
+from "Settings". All these filters are external programs and they're
+located on FLT\ directory.
+
+There are some sample filters in Wolverine packet. You may also find
+more filters in {ES BBS:esbbs} file areas.
+
+{Everyone can write filters!:filterdk}
+.end
+
+.topic filterdk
+A filter gets two parameters from command-line. First parameter is the source
+file which contains the original "raw" message. Second parameter is the
+name of the output file which the filter should use it to write its processed
+data to.
+
+To gain speed, the filter may manipulate the source file directly. This
+method is also compatible with Wolverine 1.x versions. On the other hand
+using two separate files is more efficient and easier to code.
+
+To see how a filter looks like, take a look at sample filters which
+are located in FLT\.
+
+Since a filters' name cannot exceed 8 characters (DOS limit), to make
+your filter more descriptive *.FLT files exist. Its format is simple
+as hell:
+
+ Desc = Filter description
+ Author = Author of the filter
+ Files = Files used by the filter (names are separated with semicolon)
+
+Wolverine will find this extra information and use it automatically.
+
+In the "Files" line, you may use wildcards. Such a filter-info file
+looks like this: (F_SPELL.FLT)
+
+ Desc = Anna's Spell checker
+ Author = Anna Falchi
+ Files = F_SPELL.* ; DICT.INI ; FILE_ID.DIZ
+
+.end
+
+.topic global
+The "global menu" is the window which is located on the top-left of
+the screen. It has some buttons in it. All that simple.
+
+So what does make this menu special? You may add your applications
+in this menu too (which is only available for
+{registered users:registration}). Here is the method to use this
+advantage:
+
+There is a file called W.MNU in the Wolverine's main directory. You add
+your applications in this file. The method of doing this is described
+in the W.MNU file.
+
+The applications which you've added are shown with their name and a
+number. Hold-down the Alt-key and the number of the application if you
+want to run the application in a short way.
+.end
+
+.topic DESQview
+Since DESQview is becoming history day by day, I
+couldn't have a chance to try Wolverine under it so I beg your REPORTS!
+However, Wolverine supports time sharing features of DESQview.
+
+.end
+
+.topic cmdline
+Wolverine command-line parameters:
+
+ -?
+Shows an help screen which looks like this.
+
+ -cd:n
+If more than one CD-ROM drive are attached to your system, Wolverine
+uses the first as default. You can override this behaviour with
+this parameter. Give the NUMBER of the CD-ROM drive you want to use
+to play audio. The drive number is based on zero which makes your
+first drive 0, second drive 1 etc.
+
+ -cfg:nn
+Uses nn.CFG file as the configuration file and nn.KEY as the
+registration key. Say, you run wolverine with parameter -cfg:hebe. Then
+Wolverine uses HEBE.CFG as the configuration file and HEBE.KEY as
+registration key file. Since unregistered users don't have any key file
+Wolverine ignores this setting for keyfiles in such a state. Note for
+registered users: Your keyfile is called W.KEY. When you use -CFG
+parameter, don't forget to rename your keyfile to the appropriate name.
+
+ -fast
+Ones running Wolverine under a very slooow system may use this option to
+turn off some nice (but time consuming) effects such as window zooming.
+
+ -flush
+In normal conditions you wouldn't need to use this option. If you have a
+disk cache and your system hangs often (because of your system
+configuration), and you cry for your lost data, then it's time to use
+this option. This parameter forces Wolverine to flush buffers of any
+disk cache loaded resident in memory. NOTE: This parameter IS NOT for a
+possible bug in Wolverine which might cause lock-ups etc. This parameter
+is just provided you to overcome problem caused by your system
+configuration or some software running in memory anyhow. So don't think what
+you're thinking.
+
+ -lan:nn
+(should be pronounced in a BOLD and LOUD voice:) Activates Wolverine's
+multiple language support features and maximizes the power generator while
+overloading energy accumulators. (back to normal voice) Uses nn.LAN as the
+language file and nn.HLP as the help file.
+
+ -newcfg
+Deletes current configuration file and creates a new one from scratch.
+
+ -newest
+Opens newest mail packet on startup.
+
+ -nocd
+Hides the CD player.
+
+ -nocycle
+When opening a packet some green lines appear on screen. These are used
+to inform the user that Wolverine is still running in a stable state. If
+that annoys you, use this option and it all shall go.
+
+ -relax
+If you're running under a multitasking environment and Wolverine runs
+VERY slow, (see also: crawling) you may use this option to get Wolverine
+a bit faster. This option exactly turns off time-sharing features.
+
+.end
+
+.topic DOS
+Since Wolverine is a DOS based program, it runs best under DOS. To get
+maximum performance, you may use a disk cache.
+.end
+
+.topic Windows
+Wolverine has been EXTREMELY tested under Win95 and no serious
+problem was encountered. A minor detail is, Win95 wrongly assumes
+that Wolverine is a TSR program and shouldn't be closed after it's been
+quit. To overcome that problem, check the "close on exit" checkbox in
+the "properties" menu of your shortcut to Wolverine.
+
+However, Wolverine hasn't been tested that much under Win3.x. But it's
+expected that there won't be any problems. REPORT BUGS NOW!!
+.end
+
+.topic os2
+Although Wolverine supports all the timesharing features of OS/2, some
+minor adjustments may make it better:
+
+Here are the ideal OS/2 settings with the contributions of Hakan Koseoglu:
+
+ DOS_BACKGROUND_EXECUTION = OFF
+ DPMI_MEMORY_LIMIT = 4096
+ EMS_MEMORY_LIMIT = (minimum)
+ HW_TIMER = OFF
+ IDLE_SECONDS = 0
+ IDLE_SENSITIVITY = 2
+ INT_DURING_IO = OFF
+ SESSION_PRIORITY = 1
+ XMS_MEMORY_LIMIT = (minimum)
+
+.end
+
+.topic keymask
+
+ Keys:
+
+ F1:
+Shows an explanatory screen on what you are doing.
+
+ The rightmost '+' key:
+Allows you to travel between windows. (Like Alt-Tab in Windows)
+
+ The rightmost '-' key:
+Allows you to switch between two windows. Hard to use. I even don't
+remember however I did it.
+
+ Alt-F4:
+Closes active window.
+
+ F5:
+Maximizes the window. If it's already been maximized then restores its
+position and size.
+
+ Ctrl-F5:
+Allows you to move the window with keyboard.
+
+ Ctrl-F6:
+Allows you to resize the window.
+
+ Esc:
+Mostly closes the active window. If it doesn't then try Alt-F4.
+
+ Alt-D:
+Jumps into nearest dos prompt. To go back just type 'EXIT' and press
+enter. (Do I have to say these? *cry*)
+
+ Alt-X:
+Allows you to quit Wolverine. Before you quit all your files are saved
+automatically or asked for anyway.
+
+ F12:
+Emergency exit! Authorized personnel only. Does not save any unsaved
+information and does not ASKS you to do it. So beware of it!
+
+.end
+
+.topic email
+Here are e-mail addresses you can contact me:
+
+ HiTNeT:
+ Sedat Kapanoglu, 8:103/119
+
+ Internet:
+ muzaffer@ada.com.tr
+ ssg@null.net
+ ssg@energy.ogu.edu.tr
+
+.end
+
+.note sdDLDir
+.title Mail packets
+You should write where your mail packets are located (commonly the
+download path of your favorite terminal program). If you don't,
+Wolverine will never be able to find where your mail packets are
+located.
+.end
+
+.note sdULDir
+.title Reply packets
+Directory where your reply packets will be located. In most cases, the
+upload directory of your terminal program is used but that's not
+necessary. (unless your terminal program doesn't support uploads from
+other directories than its own)
+.end
+
+.note sdEditCmd
+.title Editor command
+Specifies the program you use for editing files. EDIT, Q, A are such
+these programs.
+.end
+
+.note sdFilterCmd
+.title Filter command
+You specify the filters you use here. You may use the button nearby this
+line for a point & shoot filter selector. Or you may manually type the
+filter names here separated by the plus sign.
+.end
+
+.note sdQuoteStr
+.title Quote string
+When you reply a message, a quote string is automatically added to the
+beginning of your message which contains the info about the original
+message (such as the Sender, receiver, message date etc), since you
+quote that message and the person you send the message may wonder which
+message you're talking about so this line is used for that. Here you
+specify the form of your quote line:
+
+ @F: "From" field of the quoted message.
+   @F1: first name...
+   @F2: last name...
+ @T: "To" field of the quoted message.
+   @T1: first name...
+   @T2: last name...
+ @S: Subject of the quoted message.
+ @D: Date and time of the quoted message.
+   @D1: only date...
+   @D2: only time...
+ @M: Gets to the next line. (used for multiple line quotes)
+
+.end
+
+.note sdPassword
+.title Password
+This password is asked you each time you run Wolverine. Since this field
+is blank normally, no password is asked. If you enter here something,
+REMEMBER what you've entered otherwise you won't be able to run
+Wolverine. (in such cases, you can delete the configuration file to run
+Wolverine). To remove the password just remove the contents of that
+field.
+.end
+
+.note sdAreaSort
+.title Sort message areas
+Sorts the message areas in alphabetical order. Message areas are sorted
+in the order of BBS default and that kind of sorting may confuse someone
+who is looking for a specific area. So leave that option checked.
+.end
+
+.note sdFallenAngel
+.title Use FallenAngel feature
+FallenAngel feature allows the mouse pointer to vanish automatically
+when it determines that the user doesn't need it anymore.
+.end
+
+.note sdAskPost
+.title Ask before posting message
+Each time you write a message, you can be asked should Wolverine post
+your message or just delete it. Not a useful option I think but it's
+there. For you. Yeah.
+.end
+
+.note sdPersBeep
+.title Beep on personal messages
+Each time you encounter a personal message, performs a nice and short
+musical melody (!) if this option is turned on.
+.end
+
+.note sdReplySafe
+.title Protect my replies!
+The ReplySafe(TM) mechanism in Wolverine protects your replies in THE
+SAFEST WAY. Each time you write a message all your messages are
+repacked.
+.end
+
+.note sdSortTaglines
+.title Sort my taglines
+If alphabetically sorted taglines irritate you then turn this option
+off. Are you happy now?
+.end
+
+.note sdAutoPers
+.title Automatic personal scan
+Looks for your personal messages each time you open a packet.
+.end
+
+.note sdNoVivaLaSewage
+.title Viva la quotes!
+Wolverine's "Viva la sewage" (TM) feature, prevents the user (commonly
+YOU) from quoting large chunks of mail and write a couple lines under
+it. If "text" / "quote" ratio exceeds %80 then a warning is shown and
+you won't be able to send your mail.
+.end
+
+.note sdUnreadReminder
+.title Remind unread messages
+Each time you close a mail packet, Wolverine scans for the messages you
+didn't read and prompts you if it finds any.
+.end
+
+.note sdTaglineUsage
+.title Tagline usage
+Specifies tagline usage. If you select "don't use" option, no taglines
+are appended to your messages. If you select "Ask each time", you'll be
+prompted to choos a tagline after you write a message. "Put always"
+option will make Wolverine choose a random tagline (appropriate for the
+area you're writing; see: {tagline categories:taglinecategories}) for
+your message.
+.end
+
+.topic SetupDialog
+
+You are responsible to do some adjustments here. Some options are
+disabled if you are not a registered user. These options will be enabled
+after you register Wolverine. Click the topic you want to view:
+
+ {Mail packets:sdDLDir}
+ {Reply packets:sdULDir}
+ {Editor command:sdEditCmd}
+ {Filter command:sdFilterCmd}
+ {Quote message:sdQuoteStr}
+ {Password:sdPassword}
+ {Sort message areas:sdAreaSort}
+ {Use FallenAngel feature:sdFallenAngel}
+ {Ask before posting message:sdAskPost}
+ {Beep on personal messages:sdPersBeep}
+ {Protect my replies!:sdReplySafe}
+ {Sort taglines:sdSortTaglines}
+ {Automatic personal scan:sdAutoPers}
+ {Viva la quotes!:sdNoVivaLaSewage}
+ {Tagline usage:sdTaglineUsage}
+
+.end
+
+.topic PacketOpenDialog
+
+On the top, the mail packets you have downloaded from your BBS are
+shown. Some extra info shown besides the filename, size and date of the
+packet:
+
+Tot = Total messages in packet
+
+Unr = Unread messages in packet
+
+Grea = Messages you're gonna read
+
+Grep = Messages you're gonna reply
+
+Pers = Your personal messages
+
+The list at the bottom shows the systems you may write mail without
+opening a mail packet.
+
+Buttons:
+
+Manyak Message Search!: Looks for a message in all mail packets you
+have.
+
+Refresh: Rebuilds the packet list. (useful for multitasking
+environments)
+
+.end
+
+.topic IllegalSetup
+Your configuration file is either corrupt or from an old version... Since
+v2.00, Wolverine can automatically upgrade your setup file
+automatically. Let Wolverine "do the best".
+
+(btw: "Alexander the Great" / Iron Maiden)
+.end
+
+.topic HelpOnHelp
+
+Welcome to Wolverine's context sensitive hypertext help system.
+
+Using it is simple: you click somewhere and something happens.
+
+Now be back.
+
+.end
+
+.topic about
+
+ Wolverine - En bi off line mail reader
+
+Design, programming, art, everything:
+
+ Sedat KAPANOGLU
+
+FatalVision user interface:
+
+ Sedat KAPANOGLU
+ Meric SENTUNALI
+
+Contributors:
+
+ Korhan ADILIN
+ Alpaslan ARMUTLU
+ Burc ARPAT
+ Tuncay CELIK
+ Hakan KOSEOGLU
+ Mehmet OZTURK2
+ Tufan SEZER
+ Volkan Ihsan TORE
+ Mustafa TUFAN
+
+Beta testers:
+
+ Zafer AKANSEL
+ Mehmet Kaan BALOGLU
+ Gurkan CETIN
+ Atakan CINAR
+ Emre ERKMEN
+ Doruk FISEK
+ Timucin KIZILAY
+ Ekin MEROGLU
+ Tolunay ORKUN
+ Umut OZKALYONCUOGLU
+ Necdet YUMURTACI
+ Ant SENGELLI
+
+Ones who want just to be in this list:
+
+ Alpay ZEREN
+
+.end
+
+.topic AreaListWindow
+
+Here is the place where areas are listed. Areas are used to classify
+messages by their content. In an area, subjects which are not concerning
+that area are off-topic. Local areas exist only in the BBS you're
+connected. Echo areas connected to other BBS's and each message you send
+in an echo area is sent to other BBS's. Netmail areas are used to
+send private messages which no one except the person you send the
+message can read them.
+
+Area listings are separated into two parts. Initially you see areas
+that contain messages. With cursor keys or the buttons at the top of the
+window, you can switch to the listing of empty areas.
+.end
+
+.note mwAdopt
+.title Adopt tagline
+This button allows you to steal the tagline in message and add it to
+your tagline file.
+.end
+
+.note mwPentagon
+.title Pentagon
+Pentagon button allows you to search personal information about the
+sender of the message you're reading. If no personal info found then
+you will be able to enter the information manually.
+.end
+
+.note mwOburune
+.title Other
+With this button, you reply to the receiver of the message in spite of
+the sender.
+.end
+
+.note mwAra
+.title Search
+You may search a text in message with this button.
+.end
+
+.topic MsgWindow
+
+Click on the topic you want to view:
+
+ {Other:mwOburune}
+ {Adopt:mwAdopt}
+ {Pentagon:mwPentagon}
+ {Search:mwAra}
+
+.end
+
+.topic ExecError
+Hmm... The program has returned an error code. This means, the program
+has failed to complete its job. This may be due to a corrupt file or
+miscombined command-line parameters. (miscombined? what's this?)
+.end
+
+.topic OutOfMem
+You're out of memory. Try closing some windows or restarting Wolverine.
+.end
+
+.topic FileError
+An error has occured while reading or opening a file. Under multitasking
+environment such errors may occur when multiple copies of same program
+is running. May the force be with you.
+.end
+
+.topic TaglineSelectDialog
+Here you select the tagline which will be appended to your message.
+.end
+
+.topic ManualEntry
+Here you may type any tagline you wish.
+.end
+
+.topic NoWrite
+Some areas may be read-only or you don't have authorization to write
+that area. Also if you didn't subscribe to your BBS system, the SysOp
+may choose to prevent you to write messages. SUBSCRIBE NOW!!!
+
+<SYSOPS: YOUR AD MAYBE HERE!>
+.end
+
+.topic AreaChange
+While everythings is slowly descending to their end in this meaningless
+universe, the effort you exhausted here just to change the area deserve
+respect.
+.end
+
+.topic ReplyListWindow
+Here are your replies! How nice! You see your replies here! And you need
+help! You are a very good person!
+.end
+
+.topic PrinterSetup
+Here you specify where Wolverine send its printer output to. The default
+setting is PRN. If your printer is connected to a serial port, use COMx
+instead of it. Even you may type a filename here to redirect printer
+output to file. (useless since a "save" option is already provided)
+.end
+
+.topic ReplyWindow
+You're now reading your replies! Why do you need help? I'm gonna kill you!!
+.end
+
+.topic NewPacket
+Your old replies are deleted when you create a new reply packet. If you
+haven't uploaded your reply packet to BBS yet, do not create a new
+packet.
+.end
+
+.topic UnreadDialog
+You forgot to read some messages. Here you have some choices. Pick one.
+(what a help eh?)
+.end
+
+.topic Benefits
+Benefits of being a registered user:
+
+1) You feel yourself light. Also with an extra bonus of knowing that the
+programmer surely feels even lighter, you feel lighter than ever.
+
+2) The "registration-begging" features of Wolverine will be WORKING!
+
+3) You give programmers eminence! Each cents you pay will emphasize the
+image of a programmer. While our respectfullness is growing, your wallet
+will be deflating. Don't yield!
+
+4) You automatically register to ALL minor versions. If you register to
+v2.30 then you are a registered user of 2.x (x is whatever). When you're
+upgrading to a major version (such as 2.x to 3.x) you have the
+opportunity to upgrade for just $5!
+
+5) You are not affected by price increases! (until a major version
+change)
+.end
+
+.topic Registration
+Three steps of registration:
+
+1. Deposit (or find a way to deposit) $20 to my bank account
+4400.2277977 in "Turkiye Is Bankasi". Fax the receipt to
++90-222-2201201.
+
+2. Fill in the registration form in W.REG file and send it to one of my
+{E-mail addresses:email}.
+
+3. And wait for the registration key. (You will get the key at most 3
+weeks after your form arrives)
+
+See also: {Benefits of being a registered user:benefits}
+.end
+
+.topic TaglineInputDialog
+You wanted to a new tagline. Now type your tagline.
+.end
+
+.topic AskPost
+You still have the chance not to post the message.
+.end
+
+.topic MMA
+Manyak Mesaj Ara! allows you to search a message in all your mail
+packets starting from the packet you are selected. All remaining is the
+same.
+.end
+
+.topic TaglineManagerDialog
+Here you review your taglines. When you save your changes will be
+permament.
+.end
+
+.topic MenuWindow
+This menu allows a fast access to Wolverine's several functions.
+.end
+
+.topic PersonDialog
+Here you collect information about persons.
+.end
+
+.topic PersonNotFound
+There is no personal information about the person you're looking for.
+You may enter the information directly. The information is being
+retrieved from address book file.
+.end
+
+.topic UUDecodePrompt
+You may save the file with a different name. Here you are prompted for
+that.
+.end
+
+.topic NetFlagChangeDialog
+Here you may change the netmail flags of the message you're writing.
+Some options may not be available if BBS SysOp has disabled them.
+.end
+
+.topic TextSearchDialog
+Here you enter the keyword which should be scanned in message text.
+.end
+
+.topic AlarmSetupDialog
+Here you set up the alarm of the clock. You may specify the "trigger"
+time in two ways:
+
+1. You may specify the exact time that the clock should warn you at.
+
+2. You may type how many minutes should the clock wait before warning
+you.
+
+For example, if you want the clock warn you at 03:05, then type
+03:05 here. But if you want to be warned after 10 minutes then just type
+10.
+
+.end
+
+.topic ParamInputDialog
+Here you enter the command-line parameters that should be passed to the
+program to be run. Just enter the parameters not the command.
+.end
+
+.topic FileViewOpenDialog
+"Viewer" is a feature that allows you to view any TEXT or ANSI file. Now
+here you should select the file you want to view.
+.end
+
+.topic NoDLAreaWarn
+If you don't download the messages in an area, then writing to that area
+is meaningless since you can't receive the messages sent to you in that
+area. But if you know what you're doing then go on. Otherwise you
+shouldn't send the message or you may enable the area for downloading if
+you're working with mail packets that have QWK support.
+.end
+
+.topic NoOLCSupport
+The packet which is currently open has no off-lince area configuration
+support. (such as QWK). To perform area configurations you need to
+connect to  your BBS and use your BBS' configuration menus. Good luck.
+.end
+
+.topic ReplyPacketConflict
+If multiple persons write to same reply packet, the BBS system will not
+recognize these messages and it will assume that these message belong to
+one person. You have to use different "reply packet" directories and
+probably the -cfg option of Wolverine to overcome this problem.
+
+See: {Detailed examples:multiuserexamples}
+.end
+
+.topic multiuserexamples
+Say you have a brother and you're brother intended to get into this net
+thing. May your brother's name be John. Create a batch file named
+JOHN.BAT which contains the following lines:
+
+@w -cfg:john
+
+Then create a reply packet directory for John. (tip: "JOHN"). Then run
+Wolverine from JOHN.BAT. Adjust the settings and don't forget to set
+John's "reply packets" directory to the directory you've just created.
+
+May you live happily forever.
+.end
+
+.topic SaveMsgInvalidName
+The files are saved to the TXT\ subdirectory of Wolverine. So just type
+the name of file here.
+.end
+
+.topic ColorConfigDialog
+Luke, you don't need help now. Feel the force inside. Trust the force.
+May the force be with you.
+.end
+
+.topic ArchiverSetupDialog
+Mail packets that you've downloaded are in a compressed format. To
+uncompress these packets and also compress your reply packets, Wolverine
+needs external compression/decompression programs. You probably won't
+need to  adjust these settings since they're the most common ones.
+.end
+
+.topic FilterLookup
+Here you select the filters you want to use for your messages. The
+listing on the left shows the filters you selected and the one on the
+right shows available filters. If you have unpacked a new filter but
+just don't know how to install it, you may use the "Install" feature
+here.
+.end
+
+.topic VivaLaSewage
+When you reply a message, you quote the message to make replying easier.
+But most of the novice users don't know how to delete unnecessary quote
+lines and leave them as they were. Sometimes this may even cause a
+message which is 218 lines long and only one line is belong to the
+sender is sent to all the network. An unfortunate loss especially for
+amateur networks. You may disable this check if you're a registered user
+of Wolverine.
+.end
+
+.topic SearchDialog
+Here you enter keyword information about the message you're looking for.
+You may enter keywords in all fields at the same time and Wolverine will
+use "AND" conjugation to combine these keywords. For example if you
+enter "bill" in the "From" field, and enter "kahn" in the "To"
+field, and enter "offer" in the "Subject" field then Wolverine would find
+the  message from "Bill Gates" to "Philippe Kahn" about "Offer on Pascal
+development".
+.end
+
+.topic TaglineImportHelp
+With import function you may transfer taglines in a plain text file into
+Wolverine for your personal usage. That's all.
+.end
+
+.topic CategoryAdd
+You specify the name of the tagline category here.
+(see also: {what are tagline categories:taglinecategories})
+.end
+
+.topic CategoryEdit
+Here you may change the name of the tagline category. What would you
+want more?
+.end
+
+.topic TaglineCategories
+Tagline categories allow you to categorize your taglines :)) This kind
+of classification serve two purposes: First is to make finding a tagline
+easier and allow a huge capacity of taglines while not giving a bit from
+useability and the second is to make "automatic tagline assignment"
+SMARTER! What does that mean? That means, when you write a message, if
+the area you're currently writing contains the name of one of the
+tagline categories, then it uses that category to assign a random
+tagline to that message. (Note that you must use "Put always" option in
+tagline usage).
+.end
+
+.topic FilterInstall
+You use filter installation procedure if you're not familiar with
+command-line. This option copies the necessary files of a filter for
+you.
+
+NOT: To install a filter, the filter itself must have a .FLT file inside
+its packet and the packet must be unpacked to a temp directory. (this
+may not be necessary in the future. but you are in present time now :)
+
+.end

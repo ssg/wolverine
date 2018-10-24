@@ -1,11 +1,13 @@
 # Wolverine
+
+## About
 Wolverine was a GUI-based off-line mail reader for FidoNet-style networks that I developed back in 1996. It's compatible with [BlueWave](https://en.wikipedia.org/wiki/Blue_Wave)  and very similar in functionality, albeit with a modern-looking GUI interface. It supports BlueWave & [QWK](https://en.wikipedia.org/wiki/QWK_(file_format)) formats. It hasn't been developed since 1997, I think, but I'm providing the source code to provide insight on app development practices back in the 90's.
 
 It uses [FatalVision](https://github.com/ssg/fatalvision) GUI library which also I was one of the two developers of.
 
 To see how it works you can try out [a working version on DosBox](https://github.com/ssg/wolverine/releases)
 
-# License
+## License
 The source code was licensed using MIT license.
 
 MIT License

@@ -1,0 +1,3 @@
+Desc   = Mesajin sonuna SIGN.TXT dosyasini ekler
+Files  = SIGN.TXT; F_SIGN.BAT
+Author = SSG
